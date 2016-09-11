@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.6.1",
+    "classnames": "^2.2.5",
     "etch": "^0.7.1"
   },
   "devDependencies": {
