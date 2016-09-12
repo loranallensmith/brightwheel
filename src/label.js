@@ -13,16 +13,16 @@ import etch from 'etch';
 import classNames from 'classnames';
 import EtchComponent from './etch-component';
 
-class Icon extends EtchComponent {
+class Label extends EtchComponent {
 
   constructor(properties, children) {
 
     // Construct a basic EtchComponent
     super(properties, children)
 
-    // Set default icon if unspecified
-    if(this.properties.icon === undefined) {
-      this.properties.icon = 'help-circled';
+    // Set default label if unspecified
+    if(this.properties.text === undefined) {
+      this.properties.text = 'Label';
     }
 
     // Reinitialize component
@@ -32,13 +32,11 @@ class Icon extends EtchComponent {
 
   render() {
     let classes = classNames(
-      'icon',
-      `icon-${this.properties.icon}`,
       this.properties.classNames
     );
-    return (<span className={classes}></span>);
+    return (<label className={classes}>{this.properties.text}</label>);
   }
 
 }
 
-export default Icon;
+export default Label;
