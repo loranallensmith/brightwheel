@@ -31,11 +31,12 @@ class Icon extends EtchComponent {
   }
 
   render() {
-    var iconClass = classNames(
+    var classes = classNames(
       'icon',
-      `icon-${this.properties.icon}`
+      `icon-${this.properties.icon}`,
+      this.properties.classNames
     );
-    return (<span className={iconClass}></span>);
+    return (<span className={classes}></span>);
   }
 
 }

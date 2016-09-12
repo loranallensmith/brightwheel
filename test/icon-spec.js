@@ -20,10 +20,16 @@ describe('Icon', () => {
     });
 
     it('should create a span with the correct classes', () => {
-      const myIcon = new Icon({ icon: 'user'}, []);
+      const myIcon = new Icon({ icon: 'user' }, []);
       const virtualNode = myIcon.virtualElement;
       expect(virtualNode.tagName).to.equal('SPAN');
       expect(virtualNode.properties.className).to.equal('icon icon-user');
+    });
+
+    it('should include extra classes', () => {
+      const myIcon = new Icon({ icon: 'user', classNames:['extra-class', 'another-class']}, []);
+      const virtualNode = myIcon.virtualElement;
+      expect(virtualNode.properties.className).to.contain('extra-class another-class');
     });
 
   });
