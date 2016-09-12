@@ -19,6 +19,13 @@ describe('Icon', () => {
       expect(myIcon.properties.icon).to.equal('help-circled');
     });
 
+    it('should create a span with the correct classes', () => {
+      const myIcon = new Icon({ icon: 'user'}, []);
+      const virtualNode = myIcon.virtualElement;
+      expect(virtualNode.tagName).to.equal('SPAN');
+      expect(virtualNode.properties.className).to.equal('icon icon-user');
+    });
+
   });
 
 });
