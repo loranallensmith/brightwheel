@@ -56,7 +56,7 @@
   "scripts": {
     "lint": "eslint src test tools",
     "test": "mocha --compilers js:babel-register --require babel-polyfill",
-    "test:watch": "mocha --compilers js:babel-register --reporter min --watch",
+    "test:watch": "mocha --compilers js:babel-register --require babel-polyfill --reporter min --watch",
     "test:cover": "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
