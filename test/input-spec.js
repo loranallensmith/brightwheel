@@ -8,7 +8,7 @@
  */
 
 import { expect } from 'chai';
-import Input from '../src/input-text';
+import Input from '../src/input';
 
 describe('Input', () => {
 
