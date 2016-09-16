@@ -12,35 +12,25 @@
 import etch from 'etch';
 import classNames from 'classnames';
 import EtchComponent from './etch-component';
+import Label from './label';
 
-class Label extends EtchComponent {
-
-  constructor(properties, children) {
-
-    // Construct a basic EtchComponent
-    super(properties, children)
-
-    // Set default label if unspecified
-    if(this.properties.text === undefined) {
-      this.properties.text = 'Label';
-    }
-
-    // Reinitialize component
-    etch.initialize(this);
-
-  }
+class RadioButton extends EtchComponent {
 
   render() {
     let classes = classNames(
+      'radio',
       this.properties.classNames
     );
+
     return (
-      <label className={classes}>
-        {this.children}
-        {this.properties.text}
-      </label>);
+      <div className={classes}>
+        <Label text={this.properties.text}>
+          <input type="radio" name={this.properties.name} checked={this.properties.checked}></input>
+        </Label>
+      </div>
+    );
   }
 
 }
 
-export default Label;
+export default RadioButton;
