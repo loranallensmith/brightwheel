@@ -14,7 +14,7 @@
 12. RadioButton
 13. Checkbox
 14. FormActions
-15. TabItem
+15. TabGroup
 16. Pane
 17. NavGroup
 18. ListGroup
