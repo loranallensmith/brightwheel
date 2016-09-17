@@ -19,7 +19,8 @@
 17. NavGroup
 18. ListGroup
 19. FormGroup
-20. PaneGroup
-21. ToolBar
-22. Window
-23. Table
+20. ButtonGroup
+21. PaneGroup
+22. ToolBar
+23. Window
+24. Table
