@@ -15,7 +15,6 @@ export FormActions from './form-actions';
 export FormGroup from './form-group';
 export Icon from './icon';
 export Image from './image';
-export Index from './index';
 export Input from './input';
 export Label from './label';
 export ListGroupItem from './list-group-item';
