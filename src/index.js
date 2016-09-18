@@ -7,7 +7,6 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-export EtchComponent from './etch-component';
 export ButtonGroup from './button-group';
 export Button from './button';
 export Checkbox from './checkbox';
