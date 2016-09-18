@@ -24,7 +24,7 @@ class ListGroup extends EtchComponent {
     return (
       <ul className={classes}>
         {this.children.map(function(child) {
-          return child
+          return child.render();
         })}
       </ul>);
   }

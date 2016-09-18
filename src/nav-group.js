@@ -31,7 +31,7 @@ class NavGroup extends EtchComponent {
       <nav className={classes}>
         {titleTag}
         {this.children.map(function(child) {
-          return child
+          return child.render();
         })}
       </nav>);
   }

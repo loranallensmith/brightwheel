@@ -24,7 +24,7 @@ class PaneGroup extends EtchComponent {
     return (
       <div className={classes}>
         {this.children.map(function(child) {
-          return child
+          return child.render();
         })}
       </div>);
   }
