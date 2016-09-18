@@ -35,7 +35,7 @@ class Toolbar extends EtchComponent {
       <TagName className={classes}>
         {titleBar}
         {this.children.map(function(child) {
-          child
+          return child
         })}
       </TagName>);
   }

@@ -31,7 +31,7 @@ class ListGroupItem extends EtchComponent {
     return (
       <li className={classes}>
         {this.children.map(function(child) {
-          {child}
+          return {child}
         })}
       </li>
     );

@@ -24,7 +24,7 @@ class ButtonGroup extends EtchComponent {
     return (
       <div className={classes}>
         {this.children.map(function(child) {
-          child
+          return child
         })}
       </div>);
   }
