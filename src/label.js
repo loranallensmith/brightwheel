@@ -17,7 +17,7 @@ class Label extends EtchComponent {
 
   constructor(properties, children) {
 
-    // Construct a basic EtchComponent
+    // Construct a basic EtchComponent from the parameters given
     super(properties, children)
 
     // Set default label text if unspecified
