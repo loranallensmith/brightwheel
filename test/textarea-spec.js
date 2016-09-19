@@ -30,11 +30,6 @@ describe('TextArea', () => {
       expect(myText.virtualElement.properties.className).to.include('extra-class');
     });
 
-    it('Should render the correct rows and cols', () => {
-      let myText = new TextArea({ type: 'text', rows: 10, cols: 20}, []);
-      expect(myText.virtualElement.properties).to.contain.keys({ type: 'text', rows: 10, cols: 20 });
-    });
-
     it('Should render the name', () => {
       let myText = new TextArea({ name: 'my-input'}, []);
       expect(myText.virtualElement.properties).to.contain.keys({ name: 'my-input' });
