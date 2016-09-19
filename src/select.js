@@ -20,6 +20,7 @@ class Select extends EtchComponent {
       'form-control',
       this.properties.classNames
     );
+    
     return (
       <select {...this.properties.attributes} className={classes}>
         {this.children.map(function(child) {

@@ -23,8 +23,10 @@ class Table extends EtchComponent {
       this.properties.classNames
     );
 
+    // Get table headers using the keys of the first object in the array
     let headers = Object.keys(this.children[0]);
 
+    // Generate table headers in JSX
     let headerRow =
       <thead>
         <tr>

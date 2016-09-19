@@ -18,6 +18,7 @@ class NavGroupItem extends EtchComponent {
 
   render() {
 
+    // Active NavGroupItems should render as anchor elements
     const TagName = this.properties.active === true ? `a` : `span`;
 
     let classes = classNames(

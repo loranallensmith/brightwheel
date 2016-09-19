@@ -19,7 +19,6 @@ class Button extends EtchComponent {
 
   render() {
 
-    // Specify all the right classes
     let classes = classNames(
       'btn', {
         [`btn-${this.properties.type}`]: this.properties.type !== undefined,
@@ -28,7 +27,7 @@ class Button extends EtchComponent {
       this.properties.classNames
     );
 
-    // Add an icon if specified
+    // Only render an icon if specified
     if (this.properties.icon !== undefined) {
       this.children.push(<Icon icon={this.properties.icon} classNames='icon-text' />);
     }

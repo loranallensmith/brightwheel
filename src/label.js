@@ -20,7 +20,7 @@ class Label extends EtchComponent {
     // Construct a basic EtchComponent
     super(properties, children)
 
-    // Set default label if unspecified
+    // Set default label text if unspecified
     if(this.properties.text === undefined) {
       this.properties.text = 'Label';
     }

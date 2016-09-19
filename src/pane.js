@@ -23,6 +23,7 @@ class Pane extends EtchComponent {
       },
       this.properties.classNames
     );
+    
     return (
       <div {...this.properties.attributes} className={classes}>
         {this.children.map(function(child) {

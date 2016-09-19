@@ -17,10 +17,10 @@ class Icon extends EtchComponent {
 
   constructor(properties, children) {
 
-    // Construct a basic EtchComponent
+    // Construct a basic EtchComponent from the parameters given
     super(properties, children)
 
-    // Set default icon if unspecified
+    // Set a default icon if unspecified
     if(this.properties.icon === undefined) {
       this.properties.icon = 'help-circled';
     }

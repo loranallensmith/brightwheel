@@ -17,6 +17,7 @@ class Toolbar extends EtchComponent {
 
   render() {
 
+    // Use the type (header or footer) to determine which tag to render
     let TagName = this.properties.type;
 
     let classes = classNames(
@@ -26,7 +27,7 @@ class Toolbar extends EtchComponent {
       this.properties.classNames
     );
 
-    let titleBar = "";
+    let titleBar;
     if(this.properties.title !== undefined) {
       titleBar = <h1 {...this.properties.attributes} className='title'>this.properties.title</h1>
     }

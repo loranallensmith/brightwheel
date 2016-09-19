@@ -21,7 +21,7 @@ class NavGroup extends EtchComponent {
       this.properties.classNames
     );
 
-    let titleTag = "";
+    let titleTag;
 
     if (this.properties.title !== undefined) {
       titleTag = <h5 class="nav-group-title">{this.properties.title}</h5>
