@@ -34,7 +34,7 @@ class Button extends EtchComponent {
     }
 
     return (
-      <button className={classes}>
+      <button {...this.properties.attributes} className={classes}>
         {this.children}
         {this.properties.text}
       </button>

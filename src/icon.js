@@ -36,7 +36,7 @@ class Icon extends EtchComponent {
       `icon-${this.properties.icon}`,
       this.properties.classNames
     );
-    return (<span className={classes}></span>);
+    return (<span {...this.properties.attributes} className={classes}></span>);
   }
 
 }

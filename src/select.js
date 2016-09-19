@@ -21,7 +21,7 @@ class Select extends EtchComponent {
       this.properties.classNames
     );
     return (
-      <select className={classes}>
+      <select {...this.properties.attributes} className={classes}>
         {this.children.map(function(child) {
           return <option>{child}</option>
         })}

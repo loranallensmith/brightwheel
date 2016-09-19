@@ -36,7 +36,7 @@ class Table extends EtchComponent {
 
 
     return (
-      <table className={classes}>
+      <table {...this.properties.attributes} className={classes}>
         {headerRow}
         <tbody>
           {this.children.map(function(child) {

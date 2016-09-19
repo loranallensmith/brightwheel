@@ -28,7 +28,7 @@ class NavGroup extends EtchComponent {
     }
 
     return (
-      <nav className={classes}>
+      <nav {...this.properties.attributes} className={classes}>
         {titleTag}
         {this.children.map(function(child) {
           return child.render();

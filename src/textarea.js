@@ -22,7 +22,7 @@ class TextArea extends EtchComponent {
     );
 
     return (
-      <textarea type={this.properties.type} name={this.properties.name} className={classes} rows={this.properties.rows} cols={this.properties.cols} placeholder={this.properties.placeholder}>
+      <textarea type={this.properties.type} name={this.properties.name} {...this.properties.attributes} className={classes} rows={this.properties.rows} cols={this.properties.cols} placeholder={this.properties.placeholder}>
         {this.properties.text}
       </textarea>
     );

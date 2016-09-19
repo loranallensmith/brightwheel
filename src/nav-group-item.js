@@ -37,7 +37,7 @@ class NavGroupItem extends EtchComponent {
     }
 
     return (
-      <TagName className={classes}>
+      <TagName {...this.properties.attributes} className={classes}>
         {navItemIcon}
         {this.properties.text}
       </TagName>

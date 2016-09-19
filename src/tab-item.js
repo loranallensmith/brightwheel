@@ -34,7 +34,7 @@ class TabItem extends EtchComponent {
     let iconType = this.properties.fixed ? 'plus' : 'cancel';
 
     return (
-      <div className={tabClasses}>
+      <div {...this.properties.attributes} className={tabClasses}>
         <Icon icon={iconType} classNames={spanClasses} />
         {this.properties.text}
       </div>

@@ -22,7 +22,7 @@ class Window extends EtchComponent {
     );
 
     return (
-      <div className={classes}>
+      <div {...this.properties.attributes} className={classes}>
         {this.children.map(function(child) {
           return child.render();
         })}

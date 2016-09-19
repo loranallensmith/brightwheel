@@ -25,7 +25,7 @@ class Image extends EtchComponent {
       this.properties.classNames
     );
 
-    return (<img className={classes} src={this.properties.src} width={this.properties.width} height={this.properties.height}></img>);
+    return (<img {...this.properties.attributes} className={classes} src={this.properties.src} width={this.properties.width} height={this.properties.height}></img>);
   }
 
 }

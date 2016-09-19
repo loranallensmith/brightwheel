@@ -22,7 +22,7 @@ class ListGroup extends EtchComponent {
     );
 
     return (
-      <ul className={classes}>
+      <ul {...this.properties.attributes} className={classes}>
         {this.children.map(function(child) {
           return child.render();
         })}

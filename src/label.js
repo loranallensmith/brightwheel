@@ -35,7 +35,7 @@ class Label extends EtchComponent {
       this.properties.classNames
     );
     return (
-      <label className={classes}>
+      <label {...this.properties.attributes} className={classes}>
         {this.children}
         {this.properties.text}
       </label>);

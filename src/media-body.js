@@ -31,7 +31,7 @@ class MediaBody extends EtchComponent {
 
 
     return (
-      <div className={classes}>
+      <div {...this.properties.attributes} className={classes}>
         {this.children}
       </div>
     );

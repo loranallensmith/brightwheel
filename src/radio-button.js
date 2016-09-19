@@ -23,7 +23,7 @@ class RadioButton extends EtchComponent {
     );
 
     return (
-      <div className={classes}>
+      <div {...this.properties.attributes} className={classes}>
         <Label text={this.properties.text}>
           <input type="radio" name={this.properties.name} checked={this.properties.checked}></input>
         </Label>

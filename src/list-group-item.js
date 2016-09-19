@@ -29,7 +29,7 @@ class ListGroupItem extends EtchComponent {
     );
 
     return (
-      <li className={classes}>
+      <li {...this.properties.attributes} className={classes}>
         {this.children.map(function(child) {
           return {child}
         })}

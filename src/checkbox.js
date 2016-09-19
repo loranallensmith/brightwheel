@@ -23,7 +23,7 @@ class Checkbox extends EtchComponent {
     );
 
     return (
-      <div className={classes}>
+      <div {...this.properties.attributes} className={classes}>
         <Label text={this.properties.text}>
           <input type="checkbox" name={this.properties.name} checked={this.properties.checked}></input>
         </Label>
