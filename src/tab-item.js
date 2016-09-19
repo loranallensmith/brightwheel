@@ -11,10 +11,10 @@
 
 import etch from 'etch';
 import classNames from 'classnames';
-import EtchComponent from './etch-component';
+import BrightwheelComponent from './brightwheel-component';
 import Icon from './icon';
 
-class TabItem extends EtchComponent {
+class TabItem extends BrightwheelComponent {
 
   render() {
 

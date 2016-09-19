@@ -11,12 +11,12 @@
 
 import etch from 'etch'
 
-class EtchComponent {
+class BrightwheelComponent {
 
   // Required: Define an ordinary constructor to initialize your component.
   constructor(properties, children) {
 
-    if(new.target === EtchComponent) {
+    if(new.target === BrightwheelComponent) {
       throw new TypeError('You cannot create an instance of this class.  Instead extend it.');
     }
 
@@ -59,4 +59,4 @@ class EtchComponent {
 
 }
 
-export default EtchComponent;
+export default BrightwheelComponent;

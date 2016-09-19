@@ -11,9 +11,9 @@
 
 import etch from 'etch';
 import classNames from 'classnames';
-import EtchComponent from './etch-component';
+import BrightwheelComponent from './brightwheel-component';
 
-class ButtonGroup extends EtchComponent {
+class ButtonGroup extends BrightwheelComponent {
 
   render() {
     let classes = classNames(

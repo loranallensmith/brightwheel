@@ -11,13 +11,13 @@
 
 import etch from 'etch';
 import classNames from 'classnames';
-import EtchComponent from './etch-component';
+import BrightwheelComponent from './brightwheel-component';
 
-class Icon extends EtchComponent {
+class Icon extends BrightwheelComponent {
 
   constructor(properties, children) {
 
-    // Construct a basic EtchComponent from the parameters given
+    // Construct a basic BrightwheelComponent from the parameters given
     super(properties, children)
 
     // Set a default icon if unspecified

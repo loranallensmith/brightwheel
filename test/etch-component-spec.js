@@ -8,15 +8,15 @@
  */
 
 import { expect } from 'chai';
-import EtchComponent from '../src/etch-component';
+import BrightwheelComponent from '../src/brightwheel-component';
 
-describe('EtchComponent', () => {
+describe('BrightwheelComponent', () => {
 
   describe('constructor', () => {
 
     it('should not be instantiable', () => {
       const fn = () => {
-        let myComponent = new EtchComponent({ type: 'abstract' }, []);
+        let myComponent = new BrightwheelComponent({ type: 'abstract' }, []);
         return myComponent;
       };
       expect(fn).to.throw(TypeError);

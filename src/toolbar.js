@@ -11,9 +11,9 @@
 
 import etch from 'etch';
 import classNames from 'classnames';
-import EtchComponent from './etch-component';
+import BrightwheelComponent from './brightwheel-component';
 
-class Toolbar extends EtchComponent {
+class Toolbar extends BrightwheelComponent {
 
   render() {
 

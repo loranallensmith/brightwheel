@@ -11,10 +11,10 @@
 
 import etch from 'etch';
 import classNames from 'classnames';
-import EtchComponent from './etch-component';
+import BrightwheelComponent from './brightwheel-component';
 import Label from './label';
 
-class Checkbox extends EtchComponent {
+class Checkbox extends BrightwheelComponent {
 
   render() {
     let classes = classNames(
