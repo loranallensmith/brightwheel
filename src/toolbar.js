@@ -29,7 +29,7 @@ class Toolbar extends EtchComponent {
 
     let titleBar;
     if(this.properties.title !== undefined) {
-      titleBar = <h1 {...this.properties.attributes} className='title'>this.properties.title</h1>
+      titleBar = <h1 className='title'>this.properties.title</h1>
     }
 
     return (
