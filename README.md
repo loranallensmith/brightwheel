@@ -1,17 +1,17 @@
-# [breit-wheeler](https://github.com/loranallensmith/breit-wheeler)
+# [brightwheel](https://github.com/loranallensmith/brightwheel)
 
-[![NPM version](http://img.shields.io/npm/v/breit-wheeler.svg?style=flat-square)](https://www.npmjs.com/package/breit-wheeler)
-[![NPM downloads](http://img.shields.io/npm/dm/breit-wheeler.svg?style=flat-square)](https://www.npmjs.com/package/breit-wheeler)
-[![Build Status](http://img.shields.io/travis/loranallensmith/breit-wheeler/master.svg?style=flat-square)](https://travis-ci.org/loranallensmith/breit-wheeler)
-[![Coverage Status](https://img.shields.io/coveralls/loranallensmith/breit-wheeler.svg?style=flat-square)](https://coveralls.io/loranallensmith/breit-wheeler)
-[![Dependency Status](http://img.shields.io/david/loranallensmith/breit-wheeler.svg?style=flat-square)](https://david-dm.org/loranallensmith/breit-wheeler)
+[![NPM version](http://img.shields.io/npm/v/brightwheel.svg?style=flat-square)](https://www.npmjs.com/package/brightwheel)
+[![NPM downloads](http://img.shields.io/npm/dm/brightwheel.svg?style=flat-square)](https://www.npmjs.com/package/brightwheel)
+[![Build Status](http://img.shields.io/travis/loranallensmith/brightwheel/master.svg?style=flat-square)](https://travis-ci.org/loranallensmith/brightwheel)
+[![Coverage Status](https://img.shields.io/coveralls/loranallensmith/brightwheel.svg?style=flat-square)](https://coveralls.io/loranallensmith/brightwheel)
+[![Dependency Status](http://img.shields.io/david/loranallensmith/brightwheel.svg?style=flat-square)](https://david-dm.org/loranallensmith/brightwheel)
 
 > Build beautiful Electron user interfaces with Photon and Etch
 
 ### How to Install
 
 ```sh
-$ npm install breit-wheeler
+$ npm install brightwheel
 ```
 
 ### Getting Started

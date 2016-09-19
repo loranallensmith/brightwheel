@@ -1,5 +1,5 @@
 /**
- * breit-wheeler
+ * brightwheel
  *
  * Copyright © 2016 Allen Smith &lt;loranallensmith@github.com&gt;. All rights reserved.
  *

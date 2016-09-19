@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "breit-wheeler",
+  "name": "brightwheel",
   "version": "0.0.0",
   "description": "Build beautiful Electron user interfaces with Photon and Etch",
-  "repository": "loranallensmith/breit-wheeler",
+  "repository": "loranallensmith/brightwheel",
   "author": "Allen Smith &lt;loranallensmith@github.com&gt;",
   "license": "MIT",
   "keywords": [],
@@ -62,7 +62,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
     "prepublish": "npm run build",
-    "publish:docs": "easystatic deploy docs --repo loranallensmith/breit-wheeler",
+    "publish:docs": "easystatic deploy docs --repo loranallensmith/brightwheel",
     "start": "easystatic start docs"
   }
 }

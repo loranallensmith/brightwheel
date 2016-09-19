@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Getting Started ∙ breit-wheeler
+title: Getting Started ∙ brightwheel
 ---
 
 # Getting Started

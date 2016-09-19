@@ -1,6 +1,6 @@
 ---
 id: home
-title: breit-wheeler ∙ Build beautiful Electron user interfaces with Photon and Etch
+title: brightwheel ∙ Build beautiful Electron user interfaces with Photon and Etch
 ---
 
 # Welcome!
