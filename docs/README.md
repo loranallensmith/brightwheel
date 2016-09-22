@@ -15,6 +15,11 @@ Add Brightwheel to your project's dependencies.
 
 #### Usage
 
+Include Photon styles in your HTML file's `<head>`.
+```html
+<script src="path/to/photon.css" charset="utf-8"></script>
+```
+
 Import Brightwheel components into your project.
 ```javascript
 // Import and namespace all components
@@ -80,7 +85,7 @@ let myButtonGroup = new ButtonGroup(
       id: "group-1"
     }
   },
-  [Button, Button]
+  [Button, Button...]
 );
 ```
 
