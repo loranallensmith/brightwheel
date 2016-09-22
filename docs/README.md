@@ -368,13 +368,21 @@ let myItem = new ListGroupItem({
 **Example**
 
 ```javascript
-
+let myGroup = new ListGroup({
+  attributes: {
+    id: 'group-1'
+  },
+  classNames: ['my-class'],
+}, [ListGroupItem, ListGroupItem...]);
 ```
 
 **Output**
 
 ```html
-
+<ul id="group-1" class="list-group my-class">
+  <ListGroupItem>
+  <ListGroupItem>
+</ul>
 ```
 
 
