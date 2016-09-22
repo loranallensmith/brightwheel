@@ -396,13 +396,23 @@ let myGroup = new ListGroup({
 **Example**
 
 ```javascript
-
+let myBody = new MediaBody({
+  attributes: {
+    id: 'body-1'
+  },
+  classNames: ['my-class'],
+  text: 'This is the text.'
+  title: 'This is a title'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<div id="body-1" class="media-body my-class">
+  <strong>This is a title</strong>
+  <p>This is the text</p>
+</div>
 ```
 
 
