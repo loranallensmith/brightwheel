@@ -340,13 +340,23 @@ let myLabel = new Label({
 **Example**
 
 ```javascript
-
+let myItem = new ListGroupItem({
+  active: true
+  attributes: {
+    id: 'item-1'
+  },
+  classNames: ['my-class'],
+  header: false
+}, [child-component, child-component]...);
 ```
 
 **Output**
 
 ```html
-
+<li id="item-1" class="list-group-item active my-class">
+  <child-component>
+  <child-component>...
+</li>
 ```
 
 
