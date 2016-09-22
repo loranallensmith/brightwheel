@@ -484,13 +484,21 @@ let myGroup = new NavGroup({
 **Example**
 
 ```javascript
-
+let myGroup = new PaneGroup({
+  attributes: {
+    id: 'group-1'
+  },
+  classNames: ['my-class'],
+}, [Pane, Pane...]);
 ```
 
 **Output**
 
 ```html
-
+<div id="group-1" class="pane-group my-class">
+  <Pane>
+  <Pane>
+</div>
 ```
 
 
