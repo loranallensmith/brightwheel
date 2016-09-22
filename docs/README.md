@@ -757,13 +757,24 @@ let myTextarea = new Textarea({
 **Example**
 
 ```javascript
-
+let myBar = new Toolbar({
+  attributes: {
+    id: 'bar-1',
+    classNames: ['my-class'],
+    title: 'My Toolbar',
+    type: 'header'
+  }
+}, [child-component, child-component]);
 ```
 
 **Output**
 
 ```html
-
+<header id="bar-1" class="toolbar toolbar-header my-class">
+  <h1 class="title">My Toolbar</h1>
+  <child-component>
+  <child-component>..
+</header>
 ```
 
 
@@ -775,13 +786,21 @@ let myTextarea = new Textarea({
 **Example**
 
 ```javascript
-
+let myContent = new WindowContent({
+  attributes: {
+    id: 'content-1'
+  },
+  classNames: ['my-class']
+}, [child-component, child-component...]);
 ```
 
 **Output**
 
 ```html
-
+<div id="content-1" class="window-content my-class">
+  <child-component>
+  <child-component>...
+</div>
 ```
 
 
