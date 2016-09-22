@@ -1,66 +1,7 @@
 # Brightwheel
 
-### About
-
-Brightwheel is a JavaScript library that lets you use [Etch](https://github.com/atom/etch) and [Photon](http://photonkit.com/) to construct and manage the state of user interfaces for [Electron](https://electron.atom.io) applications.
-
-### Getting Started
-
-#### Installation
-
-Add Brightwheel to your project's dependencies.
-```shell
-> npm install --save brightwheel
-```
-
-#### Usage
-
-Include Photon styles in your HTML file's `<head>`.
-```html
-<script src="path/to/photon.css" charset="utf-8"></script>
-```
-
-Import Brightwheel components into your project.
-```javascript
-// Import and namespace all components
-import * as UI from 'brightwheel'
-
-// Import individual components
-import { Button } from 'brightwheel'
-
-```
-
-Generate components and add them to your document.
-```javascript
-let mySubmitButton = new Button({
-  type: 'positive',
-  size: 'mini',
-  text: 'Submit'
-  // specify other properties as needed
-}, []);
-
-let myCancelButton = new Button({
-  type: 'default',
-  size: 'mini',
-  text: 'Cancel'
-  // specify other properties as needed
-}, []);
-
-
-// Nest components within parent components
-let myActions = new FormActions({
-  // specify properties as needed
-}, [
-  mySubmitButton,
-  myCancelButton
-]);
-
-// Nest the elements within the DOM
-document.querySelector('#form-1').appendChild(myActions.element);
-
-```
-
 ### Components
+
 - [BrightwheelComponent](#brightwheelcomponentproperties-children)
 
 ##### Windows

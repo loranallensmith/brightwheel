@@ -61,8 +61,6 @@
     "test:cover": "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
-    "prepublish": "npm run build",
-    "publish:docs": "easystatic deploy docs --repo loranallensmith/brightwheel",
-    "start": "easystatic start docs"
+    "prepublish": "npm run build"
   }
 }
