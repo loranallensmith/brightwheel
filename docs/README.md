@@ -314,13 +314,19 @@ let myInput = new Input({
 **Example**
 
 ```javascript
-
+let myLabel = new Label({
+  attributes: {
+    id: 'label-1'
+  },
+  classNames: ['my-class'],
+  text: 'Email Address'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<label id="label-1" class="my-class">Email Address</label>
 ```
 
 
