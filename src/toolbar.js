@@ -32,12 +32,22 @@ class Toolbar extends BrightwheelComponent {
       titleBar = <h1 className='title'>this.properties.title</h1>
     }
 
+    let actions;
+
+    if (this.children !== undefined && this.children.length > 0) {
+      actions = (
+        <div className="toolbar-actions">
+          {this.children.map(function(child) {
+            return child.render();
+          })}
+        </div>
+      )
+    }
+
     return (
       <TagName {...this.properties.attributes} className={classes}>
         {titleBar}
-        {this.children.map(function(child) {
-          return child.render();
-        })}
+        {actions}
       </TagName>);
   }
 

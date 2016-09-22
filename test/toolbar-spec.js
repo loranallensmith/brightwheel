@@ -40,7 +40,8 @@ describe('Toolbar', () => {
     it('should render a div for Toolbar actions', () => {
       let myButton = new Button({ text: 'My Button' }, []);
       let myToolbar = new Toolbar({}, [myButton]);
-      expect(myToolbar.children[0].constructor.name).to.equal('Button');
+      expect(myToolbar.virtualElement.children[0].tagName).to.equal('DIV');
+      expect(myToolbar.virtualElement.children[0].properties.className).to.contain('toolbar-actions');
     });
 
     it('should conditionally render a title', () => {
