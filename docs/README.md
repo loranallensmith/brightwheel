@@ -426,13 +426,24 @@ let myBody = new MediaBody({
 **Example**
 
 ```javascript
-
+let myItem = new NavGroupItem({
+  active: true
+  attributes: {
+    id: 'item-1'
+  },
+  classNames: ['my-class'],
+  icon: 'check'
+  text: 'This is an item'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<a id="item-1" class="nav-group-item active">
+  <span class="icon icon-check"></span>
+  This is an item
+</a>
 ```
 
 
