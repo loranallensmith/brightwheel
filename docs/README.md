@@ -631,13 +631,24 @@ let myGroup = new TabGroup({
 **Example**
 
 ```javascript
-
+let myTab = new TabItem({
+  active: true,
+  attributes: {
+    id: 'tab-1'
+  },
+  classNames: ['my-class'],
+  fixed: true
+  text: 'New tab'
+}, [child-component, child-component...]);
 ```
 
 **Output**
 
 ```html
-
+<div id="tab-1" class="tab-item active tab-item-fixed my-class">
+  <span class="icon icon-plus"></span>
+  New tab
+</div>
 ```
 
 
@@ -717,13 +728,22 @@ let myTable = new Table({
 **Example**
 
 ```javascript
-
+let myTextarea = new Textarea({
+  attributes: {
+    id: 'area-1'
+  },
+  classNames: ['my-class'],
+  placeholder: 'Enter your text here'
+  text: 'This is my text'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<textarea id="area-1" class="form-control my-class" placeholder="Enter your text here">
+  This is my text
+</textarea>
 ```
 
 
