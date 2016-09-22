@@ -56,7 +56,7 @@ let myActions = new FormActions({
 ]);
 
 // Nest the elements within the DOM
-document.querySelector('#form-1').appendChild(myActions);
+document.querySelector('#form-1').appendChild(myActions.element);
 
 ```
 
