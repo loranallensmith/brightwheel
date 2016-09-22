@@ -497,7 +497,7 @@ let myGroup = new PaneGroup({
 ```html
 <div id="group-1" class="pane-group my-class">
   <Pane>
-  <Pane>
+  <Pane>...
 </div>
 ```
 
@@ -512,13 +512,23 @@ let myGroup = new PaneGroup({
 **Example**
 
 ```javascript
-
+let myPane = new Pane({
+  attributes: {
+    id: 'pane-1'
+  },
+  classNames: ['my-class'],
+  sidebar: true,
+  size: 'one-third'
+}, [child-component, child-component...]);
 ```
 
 **Output**
 
 ```html
-
+<div id="pane-1" class="pane pane-one-third sidebar my-class">
+  <child-element>
+  <child-element>...
+</div>
 ```
 
 
@@ -532,13 +542,24 @@ let myGroup = new PaneGroup({
 **Example**
 
 ```javascript
-
+let myRadio = new RadioButton({
+  attributes: {
+    id: 'radio-1'
+  },
+  classNames: ['my-class'],
+  checked: true,
+  text: 'Option 1'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<div id="radio-1" class="radio my-class">
+  <label>Option 1
+    <input type="radio" checked>
+  </label>
+</div>
 ```
 
 
