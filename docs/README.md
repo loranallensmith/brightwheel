@@ -231,13 +231,19 @@ let myGroup = new FormGroup({
 **Example**
 
 ```javascript
-
+let myIcon = new Icon({
+  attributes: {
+    id: 'icon-1'
+  },
+  classNames: ['my-class']
+  icon: 'print'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<span id="icon-1" class="icon icon-print my-class"></span>
 ```
 
 
