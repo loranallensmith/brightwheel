@@ -602,13 +602,21 @@ let mySelect = new Select({
 **Example**
 
 ```javascript
-
+let myGroup = new TabGroup({
+  attributes: {
+    id: 'group-1'
+  },
+  classNames: ['my-class'],
+}, [TabItem, TabItem...]);
 ```
 
 **Output**
 
 ```html
-
+<div id="group-1" class="tab-group my-class">
+  <TabItem>
+  <TabItem>...
+</div>
 ```
 
 
