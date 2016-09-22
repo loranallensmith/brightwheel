@@ -456,13 +456,23 @@ let myItem = new NavGroupItem({
 **Example**
 
 ```javascript
-
+let myGroup = new NavGroup({
+  attributes: {
+    id: 'group-1'
+  },
+  classNames: ['my-class'],
+  title: 'My Nav Group'
+}, [NavGroupItem, NavGroupItem...]);
 ```
 
 **Output**
 
 ```html
-
+<nav id="group-1" class="nav-group my-class">
+  <h5 class="nav-group-title">My Nav Group</h5>
+  <NavGroupItem>
+  <NavGroupItem>...
+</nav>
 ```
 
 
