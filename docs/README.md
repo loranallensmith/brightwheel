@@ -104,6 +104,7 @@ document.querySelector('#form-1').appendChild(myActions.element);
 ##### Tables
 - [Table](#tableproperties-data)
 
+---
 
 #### BrightwheelComponent({properties}, [children])
 
@@ -111,6 +112,7 @@ This is the superclass that all other components extend.  It implements a minima
 
 You cannot directly instantiate this component. Instead, extend it and override its methods as needed.
 
+---
 
 #### ButtonGroup({properties}, [children])
 
@@ -141,6 +143,7 @@ let myButtonGroup = new ButtonGroup(
 </div>
 ```
 
+---
 
 #### Button({properties}, [children])
 
@@ -178,6 +181,7 @@ let myButton = new Button({
 </button>
 ```
 
+---
 
 #### Checkbox({properties}, [children])
 
@@ -212,6 +216,7 @@ let myCheckbox = new Checkbox({
 </div>
 ```
 
+---
 
 #### FormActions({properties}, [children])
 **Properties**
@@ -238,6 +243,7 @@ let myActions = new FormActions({
 </div>
 ```
 
+---
 
 #### FormGroup({properties}, [children])
 **Properties**
@@ -264,6 +270,7 @@ let myGroup = new FormGroup({
 </div>
 ```
 
+---
 
 #### Icon({properties}, [children])
 **Properties**
@@ -289,6 +296,7 @@ let myIcon = new Icon({
 <span id="icon-1" class="icon icon-print my-class"></span>
 ```
 
+---
 
 #### Image({properties}, [children])
 **Properties**
@@ -320,6 +328,7 @@ let myImage = new Image({
 <img id="image-1" class="img-rounded media-object pull-left" src="images/logo.png">
 ```
 
+---
 
 #### Input({properties}, [children])
 **Properties**
@@ -347,6 +356,7 @@ let myInput = new Input({
 <input type="text" id="input-1" class="form-control my-class" placeholder="Enter text here">
 ```
 
+---
 
 #### Label({properties}, [children])
 **Properties**
@@ -372,6 +382,7 @@ let myLabel = new Label({
 <label id="label-1" class="my-class">Email Address</label>
 ```
 
+---
 
 #### ListGroupItem({properties}, [children])
 **Properties**
@@ -402,6 +413,7 @@ let myItem = new ListGroupItem({
 </li>
 ```
 
+---
 
 #### ListGroup({properties}, [children])
 **Properties**
@@ -428,6 +440,7 @@ let myGroup = new ListGroup({
 </ul>
 ```
 
+---
 
 #### MediaBody({properties}, [children])
 **Properties**
@@ -458,6 +471,7 @@ let myBody = new MediaBody({
 </div>
 ```
 
+---
 
 #### NavGroupItem({properties}, [children])
 **Properties**
@@ -489,6 +503,7 @@ let myItem = new NavGroupItem({
 </a>
 ```
 
+---
 
 #### NavGroup({properties}, [children])
 **Properties**
@@ -518,6 +533,7 @@ let myGroup = new NavGroup({
 </nav>
 ```
 
+---
 
 #### PaneGroup({properties}, [children])
 **Properties**
@@ -544,6 +560,7 @@ let myGroup = new PaneGroup({
 </div>
 ```
 
+---
 
 #### Pane({properties}, [children])
 **Properties**
@@ -574,6 +591,7 @@ let myPane = new Pane({
 </div>
 ```
 
+---
 
 #### RadioButton({properties}, [children])
 **Properties**
@@ -605,6 +623,7 @@ let myRadio = new RadioButton({
 </div>
 ```
 
+---
 
 #### Select({properties}, [children])
 **Properties**
@@ -636,6 +655,7 @@ let mySelect = new Select({
 </select>
 ```
 
+---
 
 #### TabGroup({properties}, [children])
 **Properties**
@@ -662,6 +682,7 @@ let myGroup = new TabGroup({
 </div>
 ```
 
+---
 
 #### TabItem({properties}, [children])
 **Properties**
@@ -694,6 +715,7 @@ let myTab = new TabItem({
 </div>
 ```
 
+---
 
 #### Table({properties}, [data])
 **Properties**
@@ -760,6 +782,7 @@ let myTable = new Table({
 </table>
 ```
 
+---
 
 #### Textarea({properties}, [children])
 **Properties**
@@ -789,6 +812,7 @@ let myTextarea = new Textarea({
 </textarea>
 ```
 
+---
 
 #### Toolbar({properties}, [children])
 **Properties**
@@ -820,6 +844,7 @@ let myBar = new Toolbar({
 </header>
 ```
 
+---
 
 #### WindowContent({properties}, [children])
 **Properties**
@@ -846,6 +871,7 @@ let myContent = new WindowContent({
 </div>
 ```
 
+---
 
 #### Window({properties}, [children])
 **Properties**
