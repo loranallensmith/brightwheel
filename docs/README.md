@@ -259,13 +259,22 @@ let myIcon = new Icon({
 **Example**
 
 ```javascript
-
+let myImage = new Image({
+  attributes: {
+    id: 'image-1'
+  },
+  classNames: ['my-class'],
+  isMediaObject: true,
+  pull: 'left',
+  shape: 'rounded',
+  src: 'images/logo.png'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<img id="image-1" class="img-rounded media-object pull-left" src="images/logo.png">
 ```
 
 
