@@ -6,14 +6,14 @@
 
 #### Installation
 
-Add Brightwheel to your project's dependencies
+Add Brightwheel to your project's dependencies.
 ```shell
 > npm install --save brightwheel
 ```
 
 #### Usage
 
-Import Brightwheel components into your project
+Import Brightwheel components into your project.
 ```javascript
 // Import and namespace all components
 import * as UI from 'brightwheel'
@@ -23,7 +23,7 @@ import { Button } from 'brightwheel'
 
 ```
 
-Generate components and add them to your document
+Generate components and add them to your document.
 ```javascript
 let mySubmitButton = new Button({
   type: 'positive',
