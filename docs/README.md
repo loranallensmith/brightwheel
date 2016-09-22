@@ -288,13 +288,20 @@ let myImage = new Image({
 **Example**
 
 ```javascript
-
+let myInput = new Input({
+  attributes: {
+    id: 'input-1'
+  },
+  classNames: ['my-class'],
+  placeholder: 'Enter text here',
+  type: 'text'
+}, []);
 ```
 
 **Output**
 
 ```html
-
+<input type="text" id="input-1" class="form-control my-class" placeholder="Enter text here">
 ```
 
 
