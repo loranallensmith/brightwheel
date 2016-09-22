@@ -812,11 +812,19 @@ let myContent = new WindowContent({
 **Example**
 
 ```javascript
-
+let myWindow = new Window({
+  attributes: {
+    id: 'window-1'
+  },
+  classNames: ['my-class']
+}, [child-component, child-component...]);
 ```
 
 **Output**
 
 ```html
-
+<div id="window-1" class="window my-class">
+  <child-component>
+  <child-component>...
+</div>
 ```
