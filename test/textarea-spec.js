@@ -31,7 +31,7 @@ describe('TextArea', () => {
     });
 
     it('Should render the name', () => {
-      let myText = new TextArea({ name: 'my-input'}, []);
+      let myText = new TextArea({ attributes: { name: 'my-input' }}, []);
       expect(myText.virtualElement.properties).to.contain.keys({ name: 'my-input' });
     });
 

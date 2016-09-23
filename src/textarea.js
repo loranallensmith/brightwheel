@@ -22,7 +22,7 @@ class TextArea extends BrightwheelComponent {
     );
 
     return (
-      <textarea type={this.properties.type} name={this.properties.name} {...this.properties.attributes} className={classes} placeholder={this.properties.placeholder}>
+      <textarea {...this.properties.attributes} className={classes} placeholder={this.properties.placeholder}>
         {this.properties.text}
       </textarea>
     );
