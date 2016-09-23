@@ -8,7 +8,7 @@
  */
 
 import { expect } from 'chai';
-import PaneGroup from '../src/Pane-group';
+import PaneGroup from '../src/pane-group';
 import Pane from '../src/Pane';
 
 describe('PaneGroup', () => {
