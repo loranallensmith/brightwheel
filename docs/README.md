@@ -1,5 +1,25 @@
 # Brightwheel
 
+#### Component Structure
+
+Components all extend a superclass that implements a basic Etch component structure that defines methods for constructing, rendering, updating, and destroying the component.
+
+With a few exceptions, most components follow a similar pattern for instantiation:
+
+```javascript
+new Component({properties}, [children])
+```
+
+##### Recursive Rendering
+
+Many components are logical containers or children of other components.  For instance, a `TabItem` will usually be a child of a `TabGroup` component.  Render methods for related components try to account for this and will recursively render nested children where possible.
+
+##### Custom Components
+
+Recursive rendering of child components may cause issues if you try to add non-renderable children (such as strings, arrays, or objects) to a parent component that is expecting renderable children.  In general, it's best to only pass renderable children to components unless the component calls for a particular format, such as [`Table`](#tableproperties-data) or [`Select`](#selectproperties-options), neither of which attempt to recursively render children.
+
+Should you need to nest custom content within a component, you can work around this issue by creating a custom component that extends `BrightwheelComponent` and define a `render()` method in it that returns the content that you want to display.
+
 ### Components
 
 - [BrightwheelComponent](#brightwheelcomponentproperties-children)
@@ -34,7 +54,7 @@
 - [Label](#labelproperties-children)
 - [Checkbox](#checkboxproperties-children)
 - [RadioButton](#radiobuttonproperties-children)
-- [Select](#selectproperties-children)
+- [Select](#selectproperties-options)
 - [Textarea](#textareaproperties-children)
 
 ##### Images and Graphics
@@ -566,7 +586,7 @@ let myRadio = new RadioButton({
 
 ---
 
-#### Select({properties}, [children])
+#### Select({properties}, [options])
 **Properties**
 - `attributes` _Object_
 - `classNames` _Array_
