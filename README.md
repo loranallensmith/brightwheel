@@ -71,7 +71,9 @@ document.querySelector('#form-1').appendChild(myActions.element);
 
 ## Contributing
 
-Pull Request are welcome!  For an outline of the overall development priorities, have a look at the current [`ROADMAP.md`](https://github.com/loranallensmith/brightwheel/blob/master/ROADMAP.md) file.
+Pull Request are welcome!
+
+For an outline of the overall development priorities, have a look at the current [`ROADMAP.md`](https://github.com/loranallensmith/brightwheel/blob/master/ROADMAP.md) file.
 
 Please follow the steps below to contribute to this project:
 - Look for an open issue (or open one if it doesn't already exist)
