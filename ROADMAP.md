@@ -3,9 +3,9 @@
 #### 0.1.0
 - Component documentation
 - Quick start guide
-- Better component updating
 
 #### 0.2.0
+- Better component updating
 - Shortcuts for common component configurations
 - Event listening
 
