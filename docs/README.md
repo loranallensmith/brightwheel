@@ -2,12 +2,12 @@
 
 #### Component Structure
 
-Components all extend a superclass that implements a basic Etch component structure that defines methods for constructing, rendering, updating, and destroying the component.
+Components all extend a superclass that implements a basic [Etch](https://github.com/atom/etch) component structure that defines methods for constructing, rendering, updating, and destroying the component.
 
 With a few exceptions, most components follow a similar pattern for instantiation:
 
 ```javascript
-new Component({properties}, [children])
+new Component({properties}, [children]);
 ```
 
 ##### Recursive Rendering
