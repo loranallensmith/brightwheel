@@ -22,7 +22,7 @@ class Input extends BrightwheelComponent {
     );
 
     return (
-      <input type={this.properties.type} name={this.properties.name} {...this.properties.attributes} className={classes} placeholder={this.properties.placeholder}></input>
+      <input {...this.properties.attributes}  type={this.properties.type} name={this.properties.name} className={classes} placeholder={this.properties.placeholder}></input>
     );
   }
 
