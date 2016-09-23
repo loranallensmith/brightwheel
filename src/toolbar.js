@@ -29,7 +29,7 @@ class Toolbar extends BrightwheelComponent {
 
     let titleBar;
     if(this.properties.title !== undefined) {
-      titleBar = <h1 className='title'>this.properties.title</h1>
+      titleBar = <h1 className='title'>{this.properties.title}</h1>
     }
 
     let actions;
