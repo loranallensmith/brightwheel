@@ -22,16 +22,21 @@ class MediaBody extends BrightwheelComponent {
     );
 
     // If this component has a title, make sure we render it
+    let title;
     if(this.properties.title !== undefined){
-      this.children.push(<strong>{this.properties.title}</strong>);
+      title = <strong>{this.properties.title}</strong>
     }
 
     // Add the body text to the component
-    this.children.push(<p>{this.properties.text}</p>);
-
+    let text;
+    if(this.properties.text !== undefined) {
+      text = <p>{this.properties.text}</p>
+    }
 
     return (
       <div {...this.properties.attributes} className={classes}>
+        {title}
+        {text}
         {this.children.map(function(child) {
           return child
         })}

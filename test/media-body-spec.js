@@ -16,14 +16,14 @@ describe('MediaBody', () => {
 
     it('should render a title if given', () => {
       const myBody = new MediaBody({ title: 'My title', text: 'My body text' }, []);
-      expect(myBody.children[0].tagName).to.equal('STRONG');
-      expect(myBody.children[0].children[0].text).to.equal('My title');
+      expect(myBody.virtualElement.children[0].tagName).to.equal('STRONG');
+      expect(myBody.virtualElement.children[0].children[0].text).to.equal('My title');
     });
 
     it('should not render a title unless given', () => {
       const myBody = new MediaBody({ text: 'My body text'}, []);
-      expect(myBody.children[0].tagName).to.equal('P')
-      expect(myBody.children[0].children[0].text).to.equal('My body text');
+      expect(myBody.virtualElement.children[0].tagName).to.equal('P')
+      expect(myBody.virtualElement.children[0].children[0].text).to.equal('My body text');
     });
 
   });
