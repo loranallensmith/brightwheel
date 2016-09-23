@@ -5,7 +5,7 @@
   "repository": "loranallensmith/brightwheel",
   "author": "Allen Smith &lt;loranallensmith@github.com&gt;",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["electron", "etch", "user interface", "UI", "react"],
   "main": "index.js",
   "jsnext:main": "index.es6.js",
   "babel": {
