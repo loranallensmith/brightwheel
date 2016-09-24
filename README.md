@@ -12,6 +12,9 @@
 
 Brightwheel is a JavaScript library that lets you use [Etch](https://github.com/atom/etch) and [Photon](http://photonkit.com/) to construct and manage the state of user interfaces for [Electron](https://electron.atom.io) applications.
 
+![Electron app using Brightwheel](https://cloud.githubusercontent.com/assets/3477155/18810114/c9912f0a-825b-11e6-822f-39e4d238571e.png)
+
+
 
 ### Getting Started
 
