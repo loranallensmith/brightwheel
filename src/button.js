@@ -20,8 +20,9 @@ class Button extends BrightwheelComponent {
   render() {
 
     let classes = classNames(
-      'btn', {
-        [`btn-${this.properties.type}`]: this.properties.type !== undefined,
+      'btn',
+      this.properties.type !== undefined ? [`btn-${this.properties.type}`] : 'btn-default',
+      {
         [`btn-${this.properties.size}`]: this.properties.size !== undefined
       },
       this.properties.classNames

@@ -19,6 +19,11 @@ describe('Button', () => {
       expect(myButton.virtualElement.tagName).to.equal('BUTTON');
     });
 
+    it('should render the correct default classes', () => {
+      let myButton = new Button({ text: 'My Button'}, []);
+      expect(myButton.virtualElement.properties.className).to.equal('btn btn-default');
+     });
+
     it('should render the correct text', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini'}, []);
       expect(myButton.virtualElement.children[0]).to.contain.keys({ text: 'My Button'});
