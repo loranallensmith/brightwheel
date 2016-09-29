@@ -29,15 +29,19 @@ class Button extends BrightwheelComponent {
     );
 
     // Only render an icon if specified
+    let icon;
+
+    let iconClasses = classNames(
+      {'icon-text' : this.properties.text !== undefined}
+    )
+
     if (this.properties.icon !== undefined) {
-      this.children.push(<Icon icon={this.properties.icon} classNames='icon-text' />);
+      icon = <Icon icon={this.properties.icon} classNames={iconClasses} />
     }
 
     return (
       <button {...this.properties.attributes} className={classes}>
-        {this.children.map(function(child) {
-          return child;
-        })}
+        {icon}
         {this.properties.text}
       </button>
     );
