@@ -35,7 +35,9 @@ class Button extends BrightwheelComponent {
 
     return (
       <button {...this.properties.attributes} className={classes}>
-        {this.children}
+        {this.children.map(function(child) {
+          return child;
+        })}
         {this.properties.text}
       </button>
     );
