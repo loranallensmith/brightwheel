@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Brightwheel by loranallensmith</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Brightwheel</h1>
+        <p>Build beautiful Electron user interfaces with Photon and Etch</p>
+
+        <p class="view"><a href="https://github.com/loranallensmith/brightwheel">View the Project on GitHub <small>loranallensmith/brightwheel</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/loranallensmith/brightwheel/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/loranallensmith/brightwheel/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/loranallensmith/brightwheel">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="brightwheel" class="anchor" href="#brightwheel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/loranallensmith/brightwheel">brightwheel</a>
+</h1>
+
+<p><a href="https://www.npmjs.com/package/brightwheel"><img src="http://img.shields.io/npm/v/brightwheel.svg?style=flat-square" alt="NPM version"></a>
+<a href="https://www.npmjs.com/package/brightwheel"><img src="http://img.shields.io/npm/dm/brightwheel.svg?style=flat-square" alt="NPM downloads"></a>
+<a href="https://travis-ci.org/loranallensmith/brightwheel"><img src="http://img.shields.io/travis/loranallensmith/brightwheel/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://coveralls.io/loranallensmith/brightwheel"><img src="https://img.shields.io/coveralls/loranallensmith/brightwheel.svg?style=flat-square" alt="Coverage Status"></a>
+<a href="https://david-dm.org/loranallensmith/brightwheel"><img src="http://img.shields.io/david/loranallensmith/brightwheel.svg?style=flat-square" alt="Dependency Status"></a></p>
+
+<blockquote>
+<p>Build beautiful Electron user interfaces with Photon and Etch</p>
+</blockquote>
+
+<h3>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h3>
+
+<p>Brightwheel is a JavaScript library that lets you use <a href="https://github.com/atom/etch">Etch</a> and <a href="http://photonkit.com/">Photon</a> to construct and manage the state of user interfaces for <a href="https://electron.atom.io">Electron</a> applications.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/3477155/18810114/c9912f0a-825b-11e6-822f-39e4d238571e.png" alt="Electron app using Brightwheel"></p>
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h3>
+
+<h4>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h4>
+
+<p>Add Brightwheel to your project's dependencies.</p>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install --save brightwheel</pre></div>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h4>
+
+<p>Include Photon styles in your HTML file's <code>&lt;head&gt;</code>.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/photon.css<span class="pl-pds">"</span></span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Import Brightwheel components into your project.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Import and namespace all components</span>
+<span class="pl-k">import</span> <span class="pl-v">*</span> <span class="pl-k">as</span> <span class="pl-smi">UI</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>brightwheel<span class="pl-pds">'</span></span>
+
+<span class="pl-c">// Import individual components</span>
+<span class="pl-k">import</span> { <span class="pl-smi">Button</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>brightwheel<span class="pl-pds">'</span></span>
+</pre></div>
+
+<p>Generate components and add them to your document.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">let</span> mySubmitButton <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Button</span>({
+  type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>positive<span class="pl-pds">'</span></span>,
+  size<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>mini<span class="pl-pds">'</span></span>,
+  text<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Submit<span class="pl-pds">'</span></span>
+  <span class="pl-c">// specify other properties as needed</span>
+}, []);
+
+<span class="pl-k">let</span> myCancelButton <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Button</span>({
+  type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>default<span class="pl-pds">'</span></span>,
+  size<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>mini<span class="pl-pds">'</span></span>,
+  text<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Cancel<span class="pl-pds">'</span></span>
+  <span class="pl-c">// specify other properties as needed</span>
+}, []);
+
+
+<span class="pl-c">// Nest components within parent components</span>
+<span class="pl-k">let</span> myActions <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">FormActions</span>({
+  <span class="pl-c">// specify properties as needed</span>
+}, [
+  mySubmitButton,
+  myCancelButton
+]);
+
+<span class="pl-c">// Nest the elements within the DOM</span>
+<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>#form-1<span class="pl-pds">'</span></span>).<span class="pl-c1">appendChild</span>(<span class="pl-smi">myActions</span>.<span class="pl-smi">element</span>);
+</pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Pull Request are welcome!</p>
+
+<p>For an outline of the overall development priorities, have a look at the current <a href="https://github.com/loranallensmith/brightwheel/blob/master/ROADMAP.md"><code>ROADMAP.md</code></a> file.</p>
+
+<p>Please follow the steps below to contribute to this project:</p>
+
+<ul>
+<li>Look for an open issue (or open one if it doesn't already exist)</li>
+<li>Fork this repository</li>
+<li>Be sure to write tests for the changes you're proposing</li>
+<li>Open a Pull Request and mention <a href="https://github.com/loranallensmith" class="user-mention">@loranallensmith</a>
+</li>
+<li>To help with discoverability down the road, it helps to reference the original Issue your changes address in the body of your Pull Request</li>
+</ul>
+
+<h3>
+<a id="how-to-test" class="anchor" href="#how-to-test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Test</h3>
+
+<p>Run one, or a combination of the following commands to lint and test your code:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ npm run lint          <span class="pl-c"># Lint the source code with ESLint</span>
+$ npm <span class="pl-c1">test</span>              <span class="pl-c"># Run unit tests with Mocha</span>
+$ npm run <span class="pl-c1">test</span>:watch    <span class="pl-c"># Run unit tests with Mocha, and watch files for changes</span>
+$ npm run <span class="pl-c1">test</span>:cover    <span class="pl-c"># Run unit tests with code coverage by Istanbul</span></pre></div>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p>MIT © 2016 Allen Smith &lt;<a href="mailto:loranallensmith@github.com">loranallensmith@github.com</a>&gt;</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/loranallensmith">loranallensmith</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
