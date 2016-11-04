@@ -41,6 +41,8 @@ class BrightwheelComponent {
   update (properties, children) {
 
    // perform custom update logic here...
+   this.properties = properties;
+   this.children = children;
 
    // then call `etch.update`, which is async and returns a promise
    return etch.update(this)
