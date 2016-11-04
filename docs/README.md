@@ -788,10 +788,10 @@ let myTextarea = new Textarea({
 let myBar = new Toolbar({
   attributes: {
     id: 'bar-1',
-    classNames: ['my-class'],
-    title: 'My Toolbar',
-    type: 'header'
-  }
+  },
+  classNames: ['my-class'],
+  title: 'My Toolbar',
+  type: 'header'
 }, [child-component, child-component]);
 ```
 
