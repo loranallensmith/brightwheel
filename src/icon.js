@@ -39,11 +39,6 @@ class Icon extends BrightwheelComponent {
     return (<span {...this.properties.attributes} className={classes}></span>);
   }
 
-  update(properties, children) {
-    this.properties = properties;
-    this.children = children;
-    return etch.update(this);
-  }
 
 }
 

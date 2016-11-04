@@ -29,7 +29,7 @@ $ npm install --save brightwheel
 
 Include Photon styles in your HTML file's `<head>`.
 ```html
-<script src="path/to/photon.css" charset="utf-8"></script>
+<link rel="stylesheet" href="path/to/photon.css" media="screen" title="no title">
 ```
 
 Import Brightwheel components into your project.
