@@ -48,6 +48,8 @@
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "del": "^2.2.0",
+    "electron": "^1.6.2",
+    "electron-mocha": "^3.3.0",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.16.0",
@@ -61,14 +63,12 @@
     "standard": "^9.0.2"
   },
   "scripts": {
-    "lint": "eslint src test tools",
-    "test": "mocha --compilers js:babel-register --require babel-polyfill",
-    "test:watch": "mocha --compilers js:babel-register --require babel-polyfill --reporter min --watch",
+    "lint": "node_modules/.bin/standard --recursive test && echo Linting passed",
+    "test": "electron-mocha --renderer --compilers js:babel-register --require babel-polyfill",
     "test:cover": "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
-    "prepublish": "npm run build",
-    "standard": "node_modules/.bin/standard --recursive test && echo Linting passed"
+    "prepublish": "npm run build"
   },
   "standard": {
     "parser": "babel-eslint",
