@@ -57,7 +57,8 @@
     "mocha": "^3.1.2",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.4.0",
-    "sinon": "^2.0.0-pre"
+    "sinon": "^2.0.0-pre",
+    "standard": "^9.0.2"
   },
   "scripts": {
     "lint": "eslint src test tools",
@@ -66,6 +67,18 @@
     "test:cover": "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "standard": "node_modules/.bin/standard --recursive test && echo Linting passed"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "global": [
+      "beforeEach",
+      "describe",
+      "it",
+      "expect",
+      "requestAnimationFrame",
+      "SVGSVGElement"
+    ]
   }
 }
