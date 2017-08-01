@@ -21,7 +21,7 @@ describe('Table', () => {
           name: 'Type'
         }
       ]);
-      expect(myTable.virtualElement.tagName).to.equal('TABLE');
+      expect(myTable.element.tagName).to.equal('TABLE');
     });
 
     it('should render headers', () => {
@@ -31,10 +31,10 @@ describe('Table', () => {
           name: 'Type'
         }
       ]);
-      expect(myTable.virtualElement.children[0].tagName).to.equal('THEAD');
-      expect(myTable.virtualElement.children[0].children[0].tagName).to.equal('TR');
-      expect(myTable.virtualElement.children[0].children[0].children[0].tagName).to.equal('TH');
-      expect(myTable.virtualElement.children[0].children[0].children[0].children[0].text).to.equal('id');
+      expect(myTable.element.children[0].tagName).to.equal('THEAD');
+      expect(myTable.element.children[0].children[0].tagName).to.equal('TR');
+      expect(myTable.element.children[0].children[0].children[0].tagName).to.equal('TH');
+      expect(myTable.element.children[0].children[0].children[0].innerHTML).to.equal('id');
     });
 
     it('should render rows', () => {
@@ -44,10 +44,10 @@ describe('Table', () => {
           name: 'Type'
         }
       ]);
-      expect(myTable.virtualElement.children[1].tagName).to.equal('TBODY');
-      expect(myTable.virtualElement.children[1].children[0].tagName).to.equal('TR');
-      expect(myTable.virtualElement.children[1].children[0].children[0].tagName).to.equal('TD');
-      expect(myTable.virtualElement.children[1].children[0].children[0].children[0].text).to.equal('1')
+      expect(myTable.element.children[1].tagName).to.equal('TBODY');
+      expect(myTable.element.children[1].children[0].tagName).to.equal('TR');
+      expect(myTable.element.children[1].children[0].children[0].tagName).to.equal('TD');
+      expect(myTable.element.children[1].children[0].children[0].innerHTML).to.equal('1')
     });
 
     it('should render striped tables', () => {
@@ -57,7 +57,7 @@ describe('Table', () => {
           name: 'Type'
         }
       ]);
-      expect(myTable.virtualElement.properties.className).to.contain('table-striped');
+      expect(myTable.element.className).to.contain('table-striped');
     });
 
     it('should include extra classes', () => {
@@ -65,7 +65,7 @@ describe('Table', () => {
         id: 1,
         name: 'Type'
       }]);
-      expect(myTable.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myTable.element.className).to.contain('extra-class another-class');
     });
 
   });
