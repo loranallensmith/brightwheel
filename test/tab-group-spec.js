@@ -17,23 +17,24 @@ describe('TabGroup', () => {
 
     it('should create the right element', () => {
       let myGroup = new TabGroup({}, []);
-      expect(myGroup.virtualElement.tagName).to.equal('DIV');
+      expect(myGroup.element.tagName).to.equal('DIV');
     });
 
     it('should render the correct class', () => {
       let myGroup = new TabGroup({}, []);
-      expect(myGroup.virtualElement.properties.className).to.include('tab-group');
+      expect(myGroup.element.className).to.include('tab-group');
     });
 
     it('should include extra classes', () => {
       let myGroup = new TabGroup({ text: 'My TabGroup', classNames:['extra-class', 'another-class']}, []);
-      expect(myGroup.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myGroup.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children elements', () => {
       let myTab = new TabItem({ text: 'Test Tab', active: true }, [])
       let myGroup = new TabGroup({}, [myTab]);
-      expect(myGroup.children[0].constructor.name).to.equal('TabItem');
+      expect(myGroup.element.children[0].tagName).to.equal('DIV');
+      expect(myGroup.element.children[0].className).to.contain('tab-item');
     });
 
   });
