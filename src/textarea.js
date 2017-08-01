@@ -21,6 +21,10 @@ class TextArea extends BrightwheelComponent {
       this.properties.classNames
     );
 
+    if (this.properties.text === undefined) {
+      this.properties.text = null
+    }
+
     return (
       <textarea {...this.properties.attributes} className={classes} placeholder={this.properties.placeholder}>
         {this.properties.text}
