@@ -11,7 +11,7 @@ import { expect } from 'chai';
 import NavGroup from '../src/nav-group';
 import NavGroupItem from '../src/nav-group-item';
 
-describe('NavGroupItem', () => {
+describe('NavGroup', () => {
 
   describe('render', () => {
 
