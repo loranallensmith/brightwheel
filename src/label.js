@@ -36,8 +36,8 @@ class Label extends BrightwheelComponent {
     );
     return (
       <label {...this.properties.attributes} className={classes}>
-        {this.children}
-        {this.properties.text}
+        {this.children || null}
+        {this.properties.text || null}
       </label>);
   }
 

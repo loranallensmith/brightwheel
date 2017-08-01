@@ -16,32 +16,32 @@ describe('RadioButton', () => {
 
     it('Should render the correct elements', () => {
       let myRadio = new RadioButton({}, []);
-      let firstChild = myRadio.virtualElement.children[0];
-      expect(myRadio.virtualElement.tagName).to.equal('DIV');
-      expect(firstChild.constructor.name).to.equal('ComponentWidget');
+      let firstChild = myRadio.element.children[0];
+      expect(myRadio.element.tagName).to.equal('DIV');
+      expect(firstChild.tagName).to.equal('LABEL');
       expect(firstChild.children[0].tagName).to.equal('INPUT');
     });
 
     it('Should have the correct default classes', () => {
       let myRadio = new RadioButton({}, []);
-      expect(myRadio.virtualElement.properties.className).to.include('radio');
+      expect(myRadio.element.className).to.include('radio');
     });
 
     it('Should support multiple classes', () => {
       let myRadio = new RadioButton({ classNames: ['extra-class', 'another-class'] }, []);
-      expect(myRadio.virtualElement.properties.className).to.include('another-class');
-      expect(myRadio.virtualElement.properties.className).to.include('extra-class');
+      expect(myRadio.element.className).to.include('another-class');
+      expect(myRadio.element.className).to.include('extra-class');
     });
 
     it('Should render a name', () => {
       let myRadio = new RadioButton({ name: 'my-radio'}, []);
-      let label = myRadio.virtualElement.children[0];
-      expect(label.children[0].properties).to.contain.keys({ name: 'my-radio' });
+      let label = myRadio.element.children[0];
+      expect(label.children[0].name).to.equal('my-radio');
     });
 
     it('Should render the label text', () => {
       let myRadio = new RadioButton({ text: 'Text content'}, []);
-      expect(myRadio.virtualElement.children[0].component.properties).to.contain.keys({ text: 'Text content' });
+      expect(myRadio.element.children[0].textContent).to.equal('Text content');
     });
 
   });
