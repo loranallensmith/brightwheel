@@ -16,37 +16,38 @@ describe('Toolbar', () => {
   describe('render method', () => {
 
     it('should render headers', () => {
-      let myToolbar = new Toolbar({ type: 'header' }, []);
-      expect(myToolbar.virtualElement.tagName).to.equal('HEADER');
-      expect(myToolbar.virtualElement.properties.className).to.include('toolbar-header');
+      let myButton = new Button({ text: 'My Button', icon: 'check' }, []);
+      let myToolbar = new Toolbar({ type: 'header' }, [myButton]);
+      expect(myToolbar.element.tagName).to.equal('HEADER');
+      expect(myToolbar.element.className).to.include('toolbar-header');
     });
 
     it('should render footers', () => {
       let myToolbar = new Toolbar({ type: 'footer' }, []);
-      expect(myToolbar.virtualElement.tagName).to.equal('FOOTER');
-      expect(myToolbar.virtualElement.properties.className).to.include('toolbar-footer');
+      expect(myToolbar.element.tagName).to.equal('FOOTER');
+      expect(myToolbar.element.className).to.include('toolbar-footer');
     });
 
     it('should render the correct class', () => {
       let myToolbar = new Toolbar({}, []);
-      expect(myToolbar.virtualElement.properties.className).to.include('toolbar');
+      expect(myToolbar.element.className).to.include('toolbar');
     });
 
     it('should include extra classes', () => {
       let myToolbar = new Toolbar({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myToolbar.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myToolbar.element.className).to.contain('extra-class another-class');
     });
 
     it('should render a div for Toolbar actions', () => {
       let myButton = new Button({ text: 'My Button' }, []);
       let myToolbar = new Toolbar({}, [myButton]);
-      expect(myToolbar.virtualElement.children[0].tagName).to.equal('DIV');
-      expect(myToolbar.virtualElement.children[0].properties.className).to.contain('toolbar-actions');
+      expect(myToolbar.element.children[0].tagName).to.equal('DIV');
+      expect(myToolbar.element.children[0].className).to.contain('toolbar-actions');
     });
 
     it('should conditionally render a title', () => {
       let myToolbar = new Toolbar({ title: 'My Toolbar' }, []);
-      expect(myToolbar.virtualElement.children[0].tagName).to.equal('H1')
+      expect(myToolbar.element.children[0].tagName).to.equal('H1')
     });
 
   });
