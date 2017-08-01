@@ -17,23 +17,23 @@ describe('ButtonGroup', () => {
 
     it('should create the right element', () => {
       let myButtonGroup = new ButtonGroup({}, []);
-      expect(myButtonGroup.virtualElement.tagName).to.equal('DIV');
+      expect(myButtonGroup.element.tagName).to.equal('DIV');
     });
 
     it('should render the correct class', () => {
       let myButtonGroup = new ButtonGroup({}, []);
-      expect(myButtonGroup.virtualElement.properties.className).to.include('btn-group');
+      expect(myButtonGroup.element.className).to.include('btn-group');
     });
 
     it('should include extra classes', () => {
       let myButtonGroup = new ButtonGroup({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myButtonGroup.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myButtonGroup.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children', () => {
       let myButton = new Button({ text: 'My Button' }, [])
       let myButtonGroup = new ButtonGroup({}, [myButton]);
-      expect(myButtonGroup.children[0].constructor.name).to.equal('Button');
+      expect(myButtonGroup.element.children[0].tagName).to.equal('BUTTON');
     });
 
   });
