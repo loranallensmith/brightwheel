@@ -36,7 +36,7 @@ class TabItem extends BrightwheelComponent {
     return (
       <div {...this.properties.attributes} className={tabClasses}>
         <Icon icon={iconType} classNames={spanClasses} />
-        {this.properties.text}
+        {this.properties.text || null}
       </div>
     );
   }
