@@ -38,11 +38,14 @@ class Button extends BrightwheelComponent {
     if (this.properties.icon !== undefined) {
       icon = <Icon icon={this.properties.icon} classNames={iconClasses} />
     }
+    else {
+      icon = null
+    }
 
     return (
       <button {...this.properties.attributes} className={classes}>
-        {icon}
-        {this.properties.text}
+        {icon || null}
+        {this.properties.text || null}
       </button>
     );
   }
