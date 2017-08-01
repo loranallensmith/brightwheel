@@ -33,14 +33,11 @@ class NavGroupItem extends BrightwheelComponent {
     if(this.properties.icon) {
       navItemIcon = <Icon icon={this.properties.icon} />
     }
-    else {
-      navItemIcon = ""
-    }
 
     return (
       <TagName {...this.properties.attributes} className={classes}>
-        {navItemIcon}
-        {this.properties.text}
+        {navItemIcon || null}
+        {this.properties.text || null}
       </TagName>
     );
   }
