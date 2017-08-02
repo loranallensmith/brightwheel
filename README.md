@@ -3,7 +3,6 @@
 [![NPM version](http://img.shields.io/npm/v/brightwheel.svg?style=flat-square)](https://www.npmjs.com/package/brightwheel)
 [![NPM downloads](http://img.shields.io/npm/dm/brightwheel.svg?style=flat-square)](https://www.npmjs.com/package/brightwheel)
 [![Build Status](http://img.shields.io/travis/loranallensmith/brightwheel/master.svg?style=flat-square)](https://travis-ci.org/loranallensmith/brightwheel)
-[![Coverage Status](https://img.shields.io/coveralls/loranallensmith/brightwheel.svg?style=flat-square)](https://coveralls.io/loranallensmith/brightwheel)
 [![Dependency Status](http://img.shields.io/david/loranallensmith/brightwheel.svg?style=flat-square)](https://david-dm.org/loranallensmith/brightwheel)
 
 > Build beautiful Electron user interfaces with Photon and Etch
