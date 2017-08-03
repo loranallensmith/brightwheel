@@ -9,7 +9,7 @@
 
 import { expect } from 'chai';
 import Window from '../src/window';
-import Toolbar from '../src/toolbar';
+import WindowContent from '../src/window-content';
 
 describe('Window', () => {
 
@@ -17,23 +17,23 @@ describe('Window', () => {
 
     it('should create the right element', () => {
       let myWindow = new Window({}, []);
-      expect(myWindow.virtualElement.tagName).to.equal('DIV');
+      expect(myWindow.element.tagName).to.equal('DIV');
     });
 
     it('should render the correct class', () => {
       let myWindow = new Window({}, []);
-      expect(myWindow.virtualElement.properties.className).to.include('window');
+      expect(myWindow.element.className).to.include('window');
     });
 
     it('should include extra classes', () => {
       let myWindow = new Window({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myWindow.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myWindow.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children', () => {
-      let myToolbar = new Toolbar({}, [])
-      let myWindow = new Window({}, [myToolbar]);
-      expect(myWindow.children[0].constructor.name).to.equal('Toolbar');
+      let myWindowContent = new WindowContent({}, [])
+      let myWindow = new Window({}, [myWindowContent]);
+      expect(myWindow.children[0].element.tagName).to.equal('DIV');
     });
 
   });

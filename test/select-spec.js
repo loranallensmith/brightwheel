@@ -16,25 +16,25 @@ describe('Select', () => {
 
     it('Should render the correct element', () => {
       let mySelect = new Select({}, []);
-      expect(mySelect.virtualElement.tagName).to.equal('SELECT')
+      expect(mySelect.element.tagName).to.equal('SELECT')
     });
 
     it('Should have the correct default classes', () => {
       let mySelect = new Select({}, []);
-      expect(mySelect.virtualElement.properties.className).to.include('form-control');
+      expect(mySelect.element.className).to.include('form-control');
     });
 
     it('Should support multiple classes', () => {
       let mySelect = new Select({ classNames: ['extra-class', 'another-class'] }, []);
-      expect(mySelect.virtualElement.properties.className).to.include('another-class');
-      expect(mySelect.virtualElement.properties.className).to.include('extra-class');
+      expect(mySelect.element.className).to.include('another-class');
+      expect(mySelect.element.className).to.include('extra-class');
     });
 
     it('Should render children as option tags', () => {
       let mySelect = new Select({}, ['Option 1', 'Option 2', 'Option 3']);
-      expect(mySelect.virtualElement.children.length).to.equal(3);
-      expect(mySelect.virtualElement.children[0].tagName).to.equal('OPTION')
-      expect(mySelect.virtualElement.children[0].children[0].text).to.equal('Option 1')
+      expect(mySelect.element.children.length).to.equal(3);
+      expect(mySelect.element.children[0].tagName).to.equal('OPTION')
+      expect(mySelect.element.children[0].textContent).to.equal('Option 1')
     });
 
   });

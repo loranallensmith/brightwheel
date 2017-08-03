@@ -16,40 +16,40 @@ describe('NavGroupItem', () => {
 
     it('render as a span by default', () => {
       let myItem = new NavGroupItem({ text: 'My Item' }, []);
-      expect(myItem.virtualElement.tagName).to.equal('SPAN');
+      expect(myItem.element.tagName).to.equal('SPAN');
     });
 
     it('render as an anchor when active', () => {
      let myItem = new NavGroupItem({ text: 'My Item', active: true }, []);
-     expect(myItem.virtualElement.tagName).to.equal('A');
+     expect(myItem.element.tagName).to.equal('A');
      });
 
 
     it('should render the correct text', () => {
       let myItem = new NavGroupItem({ text: 'My Item' }, []);
-      expect(myItem.virtualElement.children[0]).to.contain.keys({ text: 'My Item'});
+      expect(myItem.element.innerHTML).to.equal('My Item');
     });
 
     it('should include extra classes', () => {
       let myItem = new NavGroupItem({ text: 'My Item', classNames: ['custom-class', 'another-class'] }, []);
-      expect(myItem.virtualElement.properties.className).to.contain('custom-class');
+      expect(myItem.element.className).to.contain('custom-class');
     });
 
     it('should support icons with text', () => {
       let myItem = new NavGroupItem({ text: 'My Item', icon: 'check' }, []);
-      let firstChild = myItem.virtualElement.children[0];
-      let secondChild = myItem.virtualElement.children[1];
-      expect(firstChild.constructor.name).to.equal('ComponentWidget');
-      expect(firstChild.component.constructor.name).to.equal('Icon');
-      expect(secondChild.constructor.name).to.equal('VirtualText');
+      let firstChild = myItem.element.children[0];
+      let text = myItem.element.textContent;
+      expect(firstChild.tagName).to.equal('SPAN');
+      expect(firstChild.className).to.include('icon');
+      expect(text).to.equal('My Item');
     });
 
     it('should support icons without text', () => {
       let myItem = new NavGroupItem({ icon: 'check' }, []);
-      let firstChild = myItem.virtualElement.children[0];
-      expect(firstChild.constructor.name).to.equal('ComponentWidget');
-      expect(firstChild.component.constructor.name).to.equal('Icon');
-      expect(myItem.virtualElement.children[1]).to.not.exist;
+      let firstChild = myItem.element.children[0];
+      expect(firstChild.tagName).to.equal('SPAN');
+      expect(firstChild.className).to.include('icon');
+      expect(myItem.element.children[1]).to.not.exist;
     });
 
   });

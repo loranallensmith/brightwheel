@@ -18,24 +18,24 @@ describe('ListGroup', () => {
 
     it('should create the right element', () => {
       let myListGroup = new ListGroup({}, []);
-      expect(myListGroup.virtualElement.tagName).to.equal('UL');
+      expect(myListGroup.element.tagName).to.equal('UL');
     });
 
     it('should render the correct class', () => {
       let myListGroup = new ListGroup({}, []);
-      expect(myListGroup.virtualElement.properties.className).to.include('list-group');
+      expect(myListGroup.element.className).to.include('list-group');
     });
 
     it('should include extra classes', () => {
       let myListGroup = new ListGroup({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myListGroup.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myListGroup.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children', () => {
       let myImage = new Image({ src: 'test.jpg' }, []);
       let myItem = new ListGroupItem({}, [myImage]);
       let myListGroup = new ListGroup({}, [myItem]);
-      expect(myListGroup.children[0].constructor.name).to.equal('ListGroupItem');
+      expect(myListGroup.element.children[0].tagName).to.equal('LI');
     });
 
   });

@@ -16,28 +16,28 @@ describe('Input', () => {
 
     it('Should render the correct element', () => {
       let myInput = new Input({}, []);
-      expect(myInput.virtualElement.tagName).to.equal('INPUT')
+      expect(myInput.element.tagName).to.equal('INPUT')
     });
 
     it('Should have the correct default classes', () => {
       let myInput = new Input({}, []);
-      expect(myInput.virtualElement.properties.className).to.include('form-control');
+      expect(myInput.element.className).to.include('form-control');
     });
 
     it('Should support multiple classes', () => {
       let myInput = new Input({ classNames: ['extra-class', 'another-class'] }, []);
-      expect(myInput.virtualElement.properties.className).to.include('another-class');
-      expect(myInput.virtualElement.properties.className).to.include('extra-class');
+      expect(myInput.element.className).to.include('another-class');
+      expect(myInput.element.className).to.include('extra-class');
     });
 
     it('Should render the correct type', () => {
       let myInput = new Input({ type: 'text'}, []);
-      expect(myInput.virtualElement.properties).to.contain.keys({ type: 'text' });
+      expect(myInput.element.type).to.equal('text');
     });
 
     it('Should render the name', () => {
       let myInput = new Input({ name: 'my-input'}, []);
-      expect(myInput.virtualElement.properties).to.contain.keys({ name: 'my-input' });
+      expect(myInput.element.name).to.equal('my-input');
     });
 
   });

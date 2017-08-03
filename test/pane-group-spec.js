@@ -17,23 +17,24 @@ describe('PaneGroup', () => {
 
     it('should create the right element', () => {
       let myPaneGroup = new PaneGroup({}, []);
-      expect(myPaneGroup.virtualElement.tagName).to.equal('DIV');
+      expect(myPaneGroup.element.tagName).to.equal('DIV');
     });
 
     it('should render the correct class', () => {
       let myPaneGroup = new PaneGroup({}, []);
-      expect(myPaneGroup.virtualElement.properties.className).to.include('pane-group');
+      expect(myPaneGroup.element.className).to.include('pane-group');
     });
 
     it('should include extra classes', () => {
       let myPaneGroup = new PaneGroup({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myPaneGroup.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myPaneGroup.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children', () => {
       let myPane = new Pane({ text: 'My Pane' }, [])
       let myPaneGroup = new PaneGroup({}, [myPane]);
-      expect(myPaneGroup.children[0].constructor.name).to.equal('Pane');
+    expect(myPaneGroup.element.children[0].tagName).to.equal('DIV');
+    expect(myPaneGroup.element.children[0].className).to.include('pane')
     });
 
   });

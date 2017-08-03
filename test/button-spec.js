@@ -16,55 +16,55 @@ describe('Button', () => {
 
     it('should render the correct element', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini'}, []);
-      expect(myButton.virtualElement.tagName).to.equal('BUTTON');
+      expect(myButton.element.tagName).to.equal('BUTTON');
     });
 
     it('should render the correct default classes', () => {
       let myButton = new Button({ text: 'My Button'}, []);
-      expect(myButton.virtualElement.properties.className).to.equal('btn btn-default');
+      expect(myButton.element.className).to.equal('btn btn-default');
      });
 
     it('should render the correct text', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini'}, []);
-      expect(myButton.virtualElement.children[0]).to.contain.keys({ text: 'My Button'});
+      expect(myButton.element.textContent).to.equal('My Button');
     });
 
     it('should include extra classes', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini', classNames: ['custom-class', 'another-class']}, []);
-      expect(myButton.virtualElement.properties.className).to.contain('custom-class');
+      expect(myButton.element.className).to.contain('custom-class');
     });
 
     it('should render different sizes', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini'}, []);
-      expect(myButton.virtualElement.properties.className).to.contain('btn-mini');
+      expect(myButton.element.className).to.contain('btn-mini');
     });
 
     it('should render different types', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini'}, []);
-      expect(myButton.virtualElement.properties.className).to.contain('btn-primary');
+      expect(myButton.element.className).to.contain('btn-primary');
     });
 
     it('should support icons with text', () => {
       let myButton = new Button({ text: 'My Button', type: 'primary', size: 'mini', icon: 'check'}, []);
-      let firstChild = myButton.virtualElement.children[0];
+      let firstChild = myButton.element.children[0];
       let secondChild =
-        myButton.virtualElement.children[1];
-      expect(firstChild.constructor.name).to.equal('ComponentWidget');
-      expect(firstChild.component.constructor.name).to.equal('Icon');
-      expect(secondChild.constructor.name).to.equal('VirtualText');
+        myButton.element.children[1];
+      expect(firstChild.tagName).to.equal('SPAN');
+      expect(firstChild.className).to.include('icon');
+      expect(myButton.element.textContent).to.equal('My Button');
     });
 
     it('should support icons without text', () => {
       let myButton = new Button({ type: 'primary', size: 'mini', icon: 'check'}, []);
-      let firstChild = myButton.virtualElement.children[0];
-      expect(firstChild.constructor.name).to.equal('ComponentWidget');
-      expect(firstChild.component.constructor.name).to.equal('Icon');
-      expect(myButton.virtualElement.children[1]).to.not.exist;
+      let firstChild = myButton.element.children[0];
+      expect(firstChild.tagName).to.equal('SPAN');
+      expect(firstChild.className).to.include('icon');
+      expect(myButton.element.textContent).to.be.empty;
     });
 
     it('should render form buttons correctly', () => {
       let myButton = new Button({ type: 'primary', size: 'mini', icon: 'check', text: 'Submit', classNames: ['btn-form']}, []);
-      expect(myButton.virtualElement.properties.className).to.contain('btn-form');
+      expect(myButton.element.className).to.contain('btn-form');
     });
 
   });

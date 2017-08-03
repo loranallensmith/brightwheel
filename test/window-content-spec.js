@@ -17,23 +17,23 @@ describe('WindowContentContent', () => {
 
     it('should create the right element', () => {
       let myWindowContent = new WindowContent({}, []);
-      expect(myWindowContent.virtualElement.tagName).to.equal('DIV');
+      expect(myWindowContent.element.tagName).to.equal('DIV');
     });
 
     it('should render the correct class', () => {
       let myWindowContent = new WindowContent({}, []);
-      expect(myWindowContent.virtualElement.properties.className).to.include('window-content');
+      expect(myWindowContent.element.className).to.include('window-content');
     });
 
     it('should include extra classes', () => {
       let myWindowContent = new WindowContent({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myWindowContent.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myWindowContent.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children', () => {
-      let myToolbar = new PaneGroup({}, [])
-      let myWindowContent = new WindowContent({}, [myToolbar]);
-      expect(myWindowContent.children[0].constructor.name).to.equal('PaneGroup');
+      let myPaneGroup = new PaneGroup({}, [])
+      let myWindowContent = new WindowContent({}, [myPaneGroup]);
+      expect(myWindowContent.children[0].element.className).to.include('pane-group');
     });
 
   });

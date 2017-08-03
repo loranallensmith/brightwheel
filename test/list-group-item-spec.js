@@ -18,25 +18,25 @@ describe('ListGroupItem', () => {
 
     it('should render the correct element', () => {
       let myItem = new ListGroupItem({}, []);
-      expect(myItem.virtualElement.tagName).to.equal('LI');
+      expect(myItem.element.tagName).to.equal('LI');
     });
 
     it('should conditionally render as active', () => {
       let myItem = new ListGroupItem({ active: true }, []);
-      expect(myItem.virtualElement.properties.className).to.contain('active');
+      expect(myItem.element.className).to.contain('active');
     });
 
     it('should include extra classes', () => {
       let myItem = new ListGroupItem({ classNames: ['custom-class', 'another-class'] }, []);
-      expect(myItem.virtualElement.properties.className).to.contain('custom-class');
+      expect(myItem.element.className).to.contain('custom-class');
     });
 
     it('should render children', () => {
       let myImage = new Image({ src: 'file.jpg', pull: 'left'}, []);
       let myBody = new MediaBody({ title: 'My body', text: 'My text'}, []);
       let myItem = new ListGroupItem({}, [myImage, myBody]);
-      expect(myItem.children[0].virtualElement.tagName).to.equal('IMG');
-      expect(myItem.children[1].virtualElement.tagName).to.equal('DIV');
+      expect(myItem.element.children[0].tagName).to.equal('IMG');
+      expect(myItem.element.children[1].tagName).to.equal('DIV');
     });
 
   });

@@ -21,15 +21,13 @@ describe('Label', () => {
 
     it('should create a label element with the correct text', () => {
       const myLabel = new Label({ text: 'Specified Label' }, []);
-      const virtualNode = myLabel.virtualElement;
-      expect(virtualNode.tagName).to.equal('LABEL');
-      expect(virtualNode.children[0].text).to.equal('Specified Label');
+      expect(myLabel.element.tagName).to.equal('LABEL');
+      expect(myLabel.element.textContent).to.equal('Specified Label');
     });
 
     it('should include extra classes', () => {
       const myLabel = new Label({ text: 'My Label', classNames:['extra-class', 'another-class']}, []);
-      const virtualNode = myLabel.virtualElement;
-      expect(virtualNode.properties.className).to.contain('extra-class another-class');
+      expect(myLabel.element.className).to.contain('extra-class another-class');
     });
 
   });

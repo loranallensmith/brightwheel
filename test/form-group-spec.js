@@ -17,23 +17,23 @@ describe('FormGroup', () => {
 
     it('should create the right element', () => {
       let myFormGroup = new FormGroup({}, []);
-      expect(myFormGroup.virtualElement.tagName).to.equal('DIV');
+      expect(myFormGroup.element.tagName).to.equal('DIV');
     });
 
     it('should render the correct class', () => {
       let myFormGroup = new FormGroup({}, []);
-      expect(myFormGroup.virtualElement.properties.className).to.include('form-group');
+      expect(myFormGroup.element.className).to.include('form-group');
     });
 
     it('should include extra classes', () => {
       let myFormGroup = new FormGroup({ classNames:['extra-class', 'another-class'] }, []);
-      expect(myFormGroup.virtualElement.properties.className).to.contain('extra-class another-class');
+      expect(myFormGroup.element.className).to.contain('extra-class another-class');
     });
 
     it('should render children', () => {
       let myLabel = new Label({ text: 'My Label' }, [])
       let myFormGroup = new FormGroup({}, [myLabel]);
-      expect(myFormGroup.children[0].constructor.name).to.equal('Label');
+      expect(myFormGroup.element.children[0].tagName).to.equal('LABEL');
     });
 
   });
