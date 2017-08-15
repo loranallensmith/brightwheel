@@ -29,7 +29,7 @@ class ListGroupItem extends BrightwheelComponent {
     );
 
     return (
-      <li {...this.properties.attributes} className={classes}>
+      <li {...this.properties.attributes} className={classes} on={{click: this.onClick}}>
         {this.children}
       </li>
     );
