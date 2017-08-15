@@ -56,6 +56,7 @@ class BrightwheelComponent {
    // then perform custom teardown logic here...
  }
 
+
   // Property Setter
   // Use this to update component state and re-render the component
   setProperty (properties) {
@@ -87,6 +88,282 @@ class BrightwheelComponent {
     }
     this.update(this.properties)
   }
+
+  // EventHandler Methods
+  onCopy (event) {
+
+  }
+
+  onCut (event) {
+
+  }
+
+  onPaste (event) {
+
+  }
+
+  onCompositionEnd (event) {
+
+  }
+
+  onCompositionStart (event) {
+
+  }
+
+  onCompositionUpdate (event) {
+
+  }
+
+  onKeyDown (event) {
+
+  }
+
+  onKeyPress (event) {
+
+  }
+
+  onKeyUp (event) {
+
+  }
+
+  onFocus (event) {
+
+  }
+
+  onBlur (event) {
+
+  }
+
+  onChange (event) {
+
+  }
+
+  onInput (event) {
+
+  }
+
+  onSubmit (event) {
+
+  }
+
+  onClick (event) {
+
+  }
+
+  onContextMenu (event) {
+
+  }
+
+  onDoubleClick (event) {
+
+  }
+
+  onDrag (event) {
+
+  }
+
+  onDragEnd (event) {
+
+  }
+
+  onDragEnter (event) {
+
+  }
+
+  onDragExit (event) {
+
+  }
+
+  onDragLeave (event) {
+
+  }
+
+  onDragOver (event) {
+
+  }
+
+  onDragStart (event) {
+
+  }
+
+  onDrop (event) {
+
+  }
+
+  onMouseDown (event) {
+
+  }
+
+  onMouseEnter (event) {
+
+  }
+
+  onMouseLeave (event) {
+
+  }
+
+  onMouseMove (event) {
+
+  }
+
+  onMouseOut (event) {
+
+  }
+
+  onMouseOver (event) {
+
+  }
+
+  onMouseUp (event) {
+
+  }
+
+  onSelect (event) {
+
+  }
+
+  onTouchCancel (event) {
+
+  }
+
+  onTouchEnd (event) {
+
+  }
+
+  onTouchMove (event) {
+
+  }
+
+  onTouchStart (event) {
+
+  }
+
+  onScroll (event) {
+
+  }
+
+  onWheel (event) {
+
+  }
+
+  onAbort (event) {
+
+  }
+
+  onCanPlay (event) {
+
+  }
+
+  onCanPlayThrough (event) {
+
+  }
+
+  onDurationChange (event) {
+
+  }
+
+  onEmptied (event) {
+
+  }
+
+  onEncrypted (event) {
+
+  }
+
+  onEnded (event) {
+
+  }
+
+  onError (event) {
+
+  }
+
+  onLoadedData (event) {
+
+  }
+
+  onLoadedMetadata (event) {
+
+  }
+
+  onLoadStart (event) {
+
+  }
+
+  onPause (event) {
+
+  }
+
+  onPlay (event) {
+
+  }
+
+  onPlaying (event) {
+
+  }
+
+  onProgress (event) {
+
+  }
+
+  onRateChange (event) {
+
+  }
+
+  onSeeked (event) {
+
+  }
+
+  onSeeking (event) {
+
+  }
+
+  onStalled (event) {
+
+  }
+
+  onSuspend (event) {
+
+  }
+
+  onTimeUpdate (event) {
+
+  }
+
+  onVolumeChange (event) {
+
+  }
+
+  onWaiting (event) {
+
+  }
+
+  onLoad (event) {
+
+  }
+
+  onError (event) {
+
+  }
+
+  onAnimationStart (event) {
+
+  }
+
+  onAnimationEnd (event) {
+
+  }
+
+  onAnimationIteration (event) {
+
+  }
+
+  onTransitionEnd (event) {
+
+  }
+
+
+
 }
 
 export default BrightwheelComponent
