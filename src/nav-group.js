@@ -30,9 +30,7 @@ class NavGroup extends BrightwheelComponent {
     return (
       <nav {...this.properties.attributes} className={classes}>
         {titleTag || null}
-        {this.children.map(function(child) {
-          return child.render();
-        })}
+        {this.children}
       </nav>);
   }
 

@@ -30,9 +30,7 @@ class ListGroupItem extends BrightwheelComponent {
 
     return (
       <li {...this.properties.attributes} className={classes}>
-        {this.children.map(function(child) {
-          return child.render();
-        })}
+        {this.children}
       </li>
     );
   }

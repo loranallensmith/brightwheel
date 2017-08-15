@@ -37,9 +37,7 @@ class MediaBody extends BrightwheelComponent {
       <div {...this.properties.attributes} className={classes}>
         {title || null}
         {text || null}
-        {this.children.map(function(child) {
-          return child
-        })}
+        {this.children}
       </div>
     );
   }

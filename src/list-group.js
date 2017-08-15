@@ -23,9 +23,7 @@ class ListGroup extends BrightwheelComponent {
 
     return (
       <ul {...this.properties.attributes} className={classes}>
-        {this.children.map(function(child) {
-          return child.render();
-        })}
+        {this.children}
       </ul>);
   }
 

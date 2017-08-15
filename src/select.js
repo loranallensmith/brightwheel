@@ -20,12 +20,10 @@ class Select extends BrightwheelComponent {
       'form-control',
       this.properties.classNames
     );
-    
+
     return (
       <select {...this.properties.attributes} className={classes}>
-        {this.children.map(function(child) {
-          return <option>{child}</option>
-        })}
+        {this.children}
       </select>
     );
   }

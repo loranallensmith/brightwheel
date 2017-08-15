@@ -23,12 +23,10 @@ class Pane extends BrightwheelComponent {
       },
       this.properties.classNames
     );
-    
+
     return (
       <div {...this.properties.attributes} className={classes}>
-        {this.children.map(function(child) {
-          return child.render();
-        })}
+        {this.children}
       </div>);
   }
 
