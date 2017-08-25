@@ -43,7 +43,7 @@ describe('Pane', () => {
     it('should render children', () => {
       let myButton = new Button({ text: 'Button' }, []);
       let myPane = new Pane({}, [myButton]);
-      expect(myPane.element.children[0].tagName).to.equal('BUTTON');
+      expect(myPane.children[0].element.tagName).to.equal('BUTTON');
     });
 
   });

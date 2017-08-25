@@ -33,7 +33,7 @@ describe('ButtonGroup', () => {
     it('should render children', () => {
       let myButton = new Button({ text: 'My Button' }, [])
       let myButtonGroup = new ButtonGroup({}, [myButton]);
-      expect(myButtonGroup.element.children[0].tagName).to.equal('BUTTON');
+      expect(myButtonGroup.children[0].element.tagName).to.equal('BUTTON');
     });
 
   });

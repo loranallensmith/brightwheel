@@ -39,14 +39,14 @@ describe('NavGroup', () => {
     it('should not render a title unless specified', () => {
       let myItem = new NavGroupItem({}, [])
       let myNavGroup = new NavGroup({}, [myItem]);
-      expect(myNavGroup.element.children[0].tagName).to.be.oneOf(['A', 'SPAN']);
+      expect(myNavGroup.children[0].element.tagName).to.be.oneOf(['A', 'SPAN']);
     });
 
     it('should render children', () => {
       let myItem = new NavGroupItem({ text: 'My Item' }, []);
       let myNavGroup = new NavGroup({}, [myItem]);
-      expect(myNavGroup.element.children[0].tagName).to.equal('SPAN');
-      expect(myNavGroup.element.children[0].className).to.include('nav-group-item');
+      expect(myNavGroup.children[0].element.tagName).to.equal('SPAN');
+      expect(myNavGroup.children[0].element.className).to.include('nav-group-item');
     });
 
   });

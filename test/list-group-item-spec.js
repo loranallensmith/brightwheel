@@ -35,8 +35,8 @@ describe('ListGroupItem', () => {
       let myImage = new Image({ src: 'file.jpg', pull: 'left'}, []);
       let myBody = new MediaBody({ title: 'My body', text: 'My text'}, []);
       let myItem = new ListGroupItem({}, [myImage, myBody]);
-      expect(myItem.element.children[0].tagName).to.equal('IMG');
-      expect(myItem.element.children[1].tagName).to.equal('DIV');
+      expect(myItem.children[0].element.tagName).to.equal('IMG');
+      expect(myItem.children[1].element.tagName).to.equal('DIV');
     });
 
   });

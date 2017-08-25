@@ -33,8 +33,8 @@ describe('PaneGroup', () => {
     it('should render children', () => {
       let myPane = new Pane({ text: 'My Pane' }, [])
       let myPaneGroup = new PaneGroup({}, [myPane]);
-    expect(myPaneGroup.element.children[0].tagName).to.equal('DIV');
-    expect(myPaneGroup.element.children[0].className).to.include('pane')
+    expect(myPaneGroup.children[0].element.tagName).to.equal('DIV');
+    expect(myPaneGroup.children[0].element.className).to.include('pane')
     });
 
   });

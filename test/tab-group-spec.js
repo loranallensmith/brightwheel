@@ -33,8 +33,8 @@ describe('TabGroup', () => {
     it('should render children elements', () => {
       let myTab = new TabItem({ text: 'Test Tab', active: true }, [])
       let myGroup = new TabGroup({}, [myTab]);
-      expect(myGroup.element.children[0].tagName).to.equal('DIV');
-      expect(myGroup.element.children[0].className).to.contain('tab-item');
+      expect(myGroup.children[0].element.tagName).to.equal('DIV');
+      expect(myGroup.children[0].element.className).to.contain('tab-item');
     });
 
   });

@@ -32,7 +32,7 @@ describe('Select', () => {
 
     it('Should render children as option tags', () => {
       let mySelect = new Select({}, ['Option 1', 'Option 2', 'Option 3']);
-      expect(mySelect.element.children.length).to.equal(3);
+      expect(mySelect.element.childNodes.length).to.equal(3);
       expect(mySelect.element.children[0].tagName).to.equal('OPTION')
       expect(mySelect.element.children[0].textContent).to.equal('Option 1')
     });

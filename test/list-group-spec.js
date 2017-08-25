@@ -35,7 +35,7 @@ describe('ListGroup', () => {
       let myImage = new Image({ src: 'test.jpg' }, []);
       let myItem = new ListGroupItem({}, [myImage]);
       let myListGroup = new ListGroup({}, [myItem]);
-      expect(myListGroup.element.children[0].tagName).to.equal('LI');
+      expect(myListGroup.children[0].element.tagName).to.equal('LI');
     });
 
   });

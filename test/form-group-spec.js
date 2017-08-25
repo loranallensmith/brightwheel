@@ -33,7 +33,7 @@ describe('FormGroup', () => {
     it('should render children', () => {
       let myLabel = new Label({ text: 'My Label' }, [])
       let myFormGroup = new FormGroup({}, [myLabel]);
-      expect(myFormGroup.element.children[0].tagName).to.equal('LABEL');
+      expect(myFormGroup.children[0].element.tagName).to.equal('LABEL');
     });
 
   });

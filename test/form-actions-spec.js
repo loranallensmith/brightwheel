@@ -33,7 +33,7 @@ describe('FormActions', () => {
     it('should render children elements', () => {
       let myButton = new Button({ text: 'Submit' }, [])
       let myActions = new FormActions({}, [myButton]);
-      expect(myActions.element.children[0].tagName).to.equal('BUTTON');
+      expect(myActions.children[0].element.tagName).to.equal('BUTTON');
     });
 
   });
