@@ -38,11 +38,9 @@ class BrightwheelComponent {
 
 
   // Optional: Update the component with new properties and children
-  update (properties, children) {
-
+  update (properties) {
    // perform custom update logic here...
    this.properties = properties;
-   this.children = children;
 
    // then call `etch.update`, which is async and returns a promise
    return etch.update(this)
@@ -59,6 +57,21 @@ class BrightwheelComponent {
 
  }
 
+  // Property Setter
+  // Use this to update component state and re-render the component
+  setProperty (properties) {
+    let newProperties = Object.assign({}, this.properties, properties)
+    this.update(newProperties)
+  }
+
+  // Property Unsetter
+  // Use this to unset a property and re-render the component
+  unsetProperty (property) {
+    if (this.properties[property]) {
+      delete this.properties[property]
+    }
+    this.update(this.properties)
+  }
 }
 
 export default BrightwheelComponent;
