@@ -21,9 +21,15 @@ class Select extends BrightwheelComponent {
       this.properties.classNames
     );
 
+    let options = []
+    this.children.forEach((child) => {
+      let optionTag = <option>{child}</option>
+      options.push(optionTag)
+    })
+
     return (
       <select {...this.properties.attributes} className={classes}>
-        {this.children}
+        {options}
       </select>
     );
   }
