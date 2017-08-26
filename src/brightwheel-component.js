@@ -54,24 +54,39 @@ class BrightwheelComponent {
    await etch.destroy(this)
 
    // then perform custom teardown logic here...
-
  }
 
   // Property Setter
   // Use this to update component state and re-render the component
   setProperty (properties) {
+    // If the newly passed properties contain an attributes object
+    if (properties.hasOwnProperty('attributes')) {
+      // Check to see if the component has any attributes specified
+      if (this.properties.attributes) {
+        // Combine old attributes and new ones
+        let newAttributes = Object.assign({}, this.properties.attributes, properties.attributes)
+        properties.attributes = newAttributes
+      }
+    }
+    // Combine existing properties and newly passed ones
     let newProperties = Object.assign({}, this.properties, properties)
+
+    // Update component with new properties
     this.update(newProperties)
   }
 
   // Property Unsetter
   // Use this to unset a property and re-render the component
   unsetProperty (property) {
+    // Check for the specified property in component properties
     if (this.properties[property]) {
       delete this.properties[property]
+      // Check for the specified property in the component attributes
+    } else if (this.properties.attributes[property]) {
+      delete this.properties.attributes[property]
     }
     this.update(this.properties)
   }
 }
 
-export default BrightwheelComponent;
+export default BrightwheelComponent

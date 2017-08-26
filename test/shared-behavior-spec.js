@@ -24,6 +24,12 @@ describe('Shared Behavior', () => {
       myButton.setProperty({text: 'Updated'})
       expect(myButton.properties.text).to.equal('Updated')
     })
+
+    it('should work with attributes too', () => {
+      let myButton = new Button({text: 'My Button', attributes: {type: 'submit'}}, [])
+      myButton.setProperty({attributes: {id: 1}})
+      expect(myButton.properties.attributes.type).to.equal('submit')
+    })
   })
   describe('unsetProperty', () => {
     it('should unset an existing property', () => {
@@ -31,6 +37,13 @@ describe('Shared Behavior', () => {
       myButton.unsetProperty('text')
       expect(myButton.properties.text).to.not.exist
       expect(myButton.properties.icon).to.equal('check')
+    })
+
+    it('should work for attributes too', () => {
+      let myButton = new Button({text: 'My Button', attributes: {id: 1, type: 'submit'}}, [])
+      myButton.unsetProperty('id')
+      expect(myButton.properties.attributes.type).to.equal('submit')
+      expect(myButton.properties.attributes.id).to.not.exist
     })
   })
 })
