@@ -24,7 +24,7 @@ class Application extends BrightwheelComponent {
     this.properties.stylesheetPaths = {
       // TODO: Implement null stylesheets for other platforms
       // aix: null,
-      darwin: 'node_modules/photonkit/dist/css/photon.css',
+      darwin: 'node_modules/photonkit/dist/css/photon.css'
       // freebsd: null,
       // linux: null,
       // openbsd: null,
@@ -35,6 +35,9 @@ class Application extends BrightwheelComponent {
     // Set the active stylesheet based on the current process.platform value.
     this.setActiveStyleSheet(process.platform)
 
+    // Initialize this component with etch.
+    etch.initialize(this)
+
   }
 
   setActiveStyleSheet(name, path = undefined) {
@@ -43,7 +46,7 @@ class Application extends BrightwheelComponent {
       this.properties.activeStylesheetPath = this.properties.stylesheetPaths[name]
     }
     // Allow for custom stylesheets
-    else if (name === 'custom' && typeof path !== "undefined") {
+    else if (name === 'custom' && typeof path !== 'undefined') {
       this.properties.activeStylesheetPath = path
     }
     else {
