@@ -24,7 +24,6 @@ class Application extends BrightwheelComponent {
           <meta charset="utf-8" />
           <title></title>
 
-          // Use photonkit for styling
           <link rel="stylesheet" href="node_modules/photonkit/dist/css/photon.css" media="screen" title="no title" charset="utf-8" />
 
         </head>
