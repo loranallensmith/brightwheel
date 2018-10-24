@@ -7,6 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+export Application from './application';
 export ButtonGroup from './button-group';
 export Button from './button';
 export Checkbox from './checkbox';
