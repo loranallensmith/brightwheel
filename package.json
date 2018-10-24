@@ -31,7 +31,7 @@
   "dependencies": {
     "babel-runtime": "^6.25.0",
     "classnames": "^2.2.5",
-    "etch": "^0.12.5",
+    "etch": "^0.14.0",
     "photonkit": "^0.1.2"
   },
   "devDependencies": {
