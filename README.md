@@ -147,11 +147,11 @@ Pull Requests are welcome!
 For an outline of the overall development priorities, have a look at the current [`ROADMAP.md`](https://github.com/loranallensmith/brightwheel/blob/master/ROADMAP.md) file.
 
 Please follow the steps below to contribute to this project:
-- Look for an open issue (or open one if it doesn't already exist)
-- Fork this repository
-- Be sure to write tests for the changes you're proposing
-- Open a Pull Request and mention @loranallensmith
-- To help with discoverability down the road, it helps to reference the original Issue your changes address in the body of your Pull Request
+- Look for an open issue (or open one if it doesn't already exist).
+- Fork this repository.
+- Be sure to write tests for the changes you're proposing.
+- Open a Pull Request and mention @loranallensmith.
+- To help with discoverability down the road, it helps to reference the original Issue your changes address in the body of your Pull Request.
 
 
 ### How to Test
