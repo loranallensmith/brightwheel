@@ -48,7 +48,7 @@
     "chai": "^4.1.0",
     "coveralls": "^2.13.1",
     "del": "^3.0.0",
-    "electron": "^1.6.11",
+    "electron": "^9.1.0",
     "electron-mocha": "^4.0.0",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
