@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "description": "Build beautiful Electron user interfaces with Photon and Etch",
   "repository": "loranallensmith/brightwheel",
-  "author": "Allen Smith &lt;loranallensmith@github.com&gt;",
+  "author": "Allen Smith &lt;loranallensmith@gmail.com&gt;",
   "license": "MIT",
   "keywords": [
     "electron",
